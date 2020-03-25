@@ -1,8 +1,8 @@
 :root {
-    --main-bg-color: #20bf6b;
-    --second-bg-color: #00d2b5;
-    --third-bf-color: #20be6b;
-    --link-color: #02d2b5;
+    --main-bg-color: rgb(26, 120, 214);
+    --second-bg-color: #f1b62b;
+    --third-bf-color: #3671c3;
+    --link-color: #ffa963;
     --navbar-height: 62px;
     /* --navbar-height: 0px; */
     --section-height: 100vh;
@@ -98,6 +98,22 @@ button.botonEnviarMensaje {
 }
 .contenido h3{
     margin-top: 20px;
+}
+.navbar-brand{
+    display: block;
+}
+.navbar-brand>img{
+    max-height: 40px;
+}
+.edukt{
+    color: var(--main-bg-color);
+    
+}
+.maestro{
+    color: var(--second-bg-color);
+}
+small.dot{
+    color: var(--main-bg-color);;
 }
 @media  (max-width: 576px) { 
     a.irArriba {
