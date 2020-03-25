@@ -136,8 +136,24 @@ small.dot {
     ;
 }
 
+.footer {
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+}
+.imgAbout>img{
+    height: 100%;
+}
 @media (max-width: 576px) {
     a.irArriba {
         bottom: 10px!important;
+    }
+}
+@media (max-width: 1000px) {
+    a.irArriba {
+        bottom: 10px!important;
+    }
+    .current,.current:hover,.current:active,.nav-link:hover,.nav-link:active{
+        border: none !important;
     }
 }

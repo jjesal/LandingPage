@@ -365,7 +365,7 @@
     <!-- Contenedor Footer -->
     <footer class="footer">
         <div class="boxTextFooter">
-            <p>Todos los derechos reservados.</p>
+            <p> © Todos los derechos reservados.</p>
         </div>
     </footer>
     <!-- Fin Contenedor Footer -->
@@ -392,46 +392,47 @@
                 return rsp.json();
             }).then(paises => {
                 let maped = paises.map(pais => {
-                    return { id: pais.text, text: pais.text, lista:pais.lista, code:pais.code }
+                    return { id: pais.text, text: pais.text, lista: pais.lista, code: pais.code }
                 })
                 console.log(maped);
                 $('#select-pais').select2({ data: maped });
                 $('#select-depa').select2();
 
             })
-            $('#select-pais').on("select2:select",(e) => {
+            $('#select-pais').on("select2:select", (e) => {
                 $('#select-depa').empty();
                 var data = e.params.data;
                 $('#inputcode').val(data.code);
-                console.log('select: ',data);
+                console.log('select: ', data);
                 let depas = data.lista.map(depa => {
                     return { id: depa, text: depa }
                 })
-                console.log('depas: ',depas)
+                console.log('depas: ', depas)
                 $('#select-depa').select2({ data: depas });
                 // $('#select-depa').trigger('change');
             })
         });
-
+        if ($(window).width() <= 576) {
+                    console.log('resize')
+                    window.destroy = true;
+                }
         $(function () {
-            console.log("holi");
-            $('section.fixBox .title').hide(); // Hide all titles
+            if (!window.destroy) {
+                $('section.fixBox .title').hide(); // Hide all titles
+                $('section.fixBox')
+                    .scrollSections({
+                        alwaysStartWithFirstSection: true, // force to load the page on the first section (prevent broswer caching)
+                        createNavigation: false,
+                        touch: false,
+                        before: function ($currentSection, $nextSection) {
+                            _initFuturSection($nextSection);
+                        },
+                        after: function ($currentSection, $previousSection) {
+                            _initNewSection($currentSection, $previousSection);
+                        }
+                    });
+            }
 
-            $('section.fixBox')
-                .scrollSections({
-                    alwaysStartWithFirstSection: true, // force to load the page on the first section (prevent broswer caching)
-                    createNavigation: false,
-                    touch: false,
-                    before: function ($currentSection, $nextSection) {
-
-                        _initFuturSection($nextSection);
-                    },
-
-                    after: function ($currentSection, $previousSection) {
-
-                        _initNewSection($currentSection, $previousSection);
-                    }
-                });
 
             function _initNewSection($section, $prevSection) {
 
@@ -460,6 +461,7 @@
             }
             $(window).resize(function () {
                 if ($(window).width() <= 576) {
+                    console.log('resize')
                     window.destroy = true;
                 }
             });
