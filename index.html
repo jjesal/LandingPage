@@ -370,10 +370,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="libs/scrollSections/scroll-startstop.events.jquery.js"></script>
+    <!-- <script src="libs/scrollSections/scroll-startstop.events.jquery.js"></script> -->
     <script src="libs/scrollSections/plugins.js"></script>
     <script src="libs/scrollSections/modernizr-2.5.3.min.js"></script>
-    <script src="libs/scrollSections/jquery.mousewheel.min.js"></script>
+    <!-- <script src="libs/scrollSections/jquery.mousewheel.min.js"></script> -->
     <script src="libs/scrollSections/jquery.scrollSections-0.4.3.min.js"></script>
     <script src="js/dataApi.js"></script>
     <script src="js/app.js"></script>
@@ -386,7 +386,7 @@
                 .scrollSections({
                     alwaysStartWithFirstSection: true, // force to load the page on the first section (prevent broswer caching)
                     createNavigation: false,
-                    touch:false,
+                    touch: false,
                     before: function ($currentSection, $nextSection) {
 
                         _initFuturSection($nextSection);
@@ -423,7 +423,12 @@
                 // Do some stuff each time before this section appears
                 // $('.title', $section).hide();
             }
-
+            $(window).resize(function () {
+                if ($(window).width() <= 576) {
+                    window.destroy=true;
+                }
+            });
+            
         });
     </script>
 </body>
