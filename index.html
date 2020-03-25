@@ -336,8 +336,8 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="inputName"><b>Código</b></label>
-                            <input type="text" class="form-control" id="inputName" placeholder="+51" required>
+                            <label for="inputcode"><b>Código</b></label>
+                            <input type="text" class="form-control" id="inputcode" placeholder="+51" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputLastName"><b>Celular</b></label>
@@ -392,7 +392,7 @@
                 return rsp.json();
             }).then(paises => {
                 let maped = paises.map(pais => {
-                    return { id: pais.text, text: pais.text, lista:pais.lista }
+                    return { id: pais.text, text: pais.text, lista:pais.lista, code:pais.code }
                 })
                 console.log(maped);
                 $('#select-pais').select2({ data: maped });
@@ -402,9 +402,10 @@
             $('#select-pais').on("select2:select",(e) => {
                 $('#select-depa').empty();
                 var data = e.params.data;
+                $('#inputcode').val(data.code);
                 console.log('select: ',data);
-                let depas = data.lista.map(pais => {
-                    return { id: pais, text: pais }
+                let depas = data.lista.map(depa => {
+                    return { id: depa, text: depa }
                 })
                 console.log('depas: ',depas)
                 $('#select-depa').select2({ data: depas });

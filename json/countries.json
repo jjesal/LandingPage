@@ -1,5 +1,6 @@
 [
   {
+    "code": "+54",
     "text": "Argentina",
     "lista": [
       "28 de Noviembre",
@@ -616,7 +617,7 @@
       "Zenon Pereyra"
     ]
   },
-  {
+  {"code": "+591",
     "text":"Bolivia",
     "lista": [
       "Anillo",
@@ -638,7 +639,7 @@
       "Trinidad"
     ]
   },
-  {
+  {"code": "+55",
     "text":"Brazil",
     "lista": [
       "Abadiania",
@@ -2687,7 +2688,7 @@
       "Xaxim"
     ]
   },
-  {
+  {"code": "+56",
     "text":"Chile",
     "lista": [
       "Algarrobo",
@@ -2813,7 +2814,7 @@
       "Vitacura"
     ]
   },
-  {
+  {"code": "+57",
     "text":"Colombia",
     "lista": [
       "Acacias",
@@ -2929,7 +2930,7 @@
       "Yumbo"
     ]
   },
-  {
+  {"code": "+506",
     "text":"Costa Rica",
     "lista": [
       "Alajuela",
@@ -3001,7 +3002,7 @@
       "Zarcero"
     ]
   },
-  {
+  {"code": "+593",
     "text":"Ecuador",
     "lista": [
       "Ambato",
@@ -3075,7 +3076,7 @@
       "Zumba"
     ]
   },
-  {
+  {"code": "+52",
     "text":"Mexico",
     "lista": [
       "Abasolo",
@@ -3828,7 +3829,7 @@
       "Zumpango"
     ]
   },
-  {
+  {"code": "+51",
     "text":"Peru",
     "lista": [
       "Abancay",
@@ -3918,7 +3919,7 @@
       "Victoria"
     ]
   },
-  {
+  {"code": "+598",
     "text":"Uruguay",
     "lista": [
       "Barra de Carrasco",
@@ -3939,7 +3940,7 @@
       "Union"
     ]
   },
-  {
+  {"code": "+58",
     "text":"Venezuela",
     "lista": [
       "Acarigua",
