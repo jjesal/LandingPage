@@ -67,7 +67,7 @@ p {
     display: block!important;
     padding: 15px;
     background: var(--main-bg-color);
-    border: 2px solid var(--main-bg-color);
+    border: 2px solid var(--third-bg-color);
     font-size: 18px;
     color: #fff;
     cursor: pointer;
@@ -572,8 +572,10 @@ a.botonGetStarted:hover {
     .nav-item {
         text-align: center;
     }
-    .current {
-        border-bottom: 2px solid #f5f5f5;
+    div.navbar-collapse>ul.navbar-nav>li.nav-item>a.nav-link.current  {
+        /* border-bottom: 2px solid #f5f5f5; */
+        border-bottom: none;
+        color: var(--edukt) !important;
     }
     /* ESTILOS HEADER */
     header {

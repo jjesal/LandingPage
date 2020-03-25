@@ -1,9 +1,11 @@
 :root {
     --main-bg-color: rgb(32, 130, 228);
     --second-bg-color: #f1b62b;
-    --third-bf-color: #3671c3;
+    --third-bg-color: #5ea1ff;
     --link-color: #ffa963;
     --navbar-height: 62px;
+    --edukt:rgb(2, 94, 187);
+    --maestro:#f1b62b;
     --box-shadow: rgba(32, 119, 191, 0.4);
     /* --navbar-height: 0px; */
     --section-height: 100vh;
