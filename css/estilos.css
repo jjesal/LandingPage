@@ -48,7 +48,7 @@ p {
 }
 
 .current {
-    border-bottom: 2px solid #20bf6b;
+    border-bottom: 2px solid var(--main-bg-color);
 }
 
 .boxLogo {
@@ -57,7 +57,7 @@ p {
 }
 
 .boxLogo h1>small {
-    color: #20bf6b;
+    color: var(--main-bg-color);
 }
 
 #subir {
@@ -70,7 +70,7 @@ p {
     display: block!important;
     padding: 15px;
     background: #20be6b;
-    border: 2px solid #20bf6b;
+    border: 2px solid var(--main-bg-color);
     font-size: 18px;
     color: #fff;
     cursor: pointer;
@@ -89,9 +89,9 @@ p {
 
 .irArriba:hover {
     background: transparent;
-    border: 2px solid #20bf6b;
+    border: 2px solid var(--main-bg-color);
     transition: all 0.3s ease 0s;
-    color: #20bf6b;
+    color: var(--main-bg-color);
     padding: 15px;
 }
 
@@ -150,15 +150,15 @@ a.botonGetStarted {
     margin-top: 20px;
     color: #fff;
     padding: 8px 20px;
-    background-color: #20bf6b;
+    background-color: var(--main-bg-color);
     border-radius: 35px;
-    border: 2px solid #20bf6b;
+    border: 2px solid var(--main-bg-color);
     box-shadow: 0px 5px 18px rgba(0, 0, 0, .2);
     transition: all 0.3s ease 0s;
 }
 
 a.botonGetStarted:hover {
-    color: #20bf6b !important;
+    color: var(--main-bg-color) !important;
     background-color: transparent;
     border-radius: 6px;
     transition: all 0.3s ease 0s;
@@ -204,11 +204,11 @@ a.botonGetStarted:hover {
 }
 
 .navbar-brand small {
-    color: #20bf6b;
+    color: var(--main-bg-color);
 }
 
 .nav-link:hover {
-    border-bottom: 2px solid #20bf6b;
+    border-bottom: 2px solid var(--main-bg-color);
 }
 
 .navbar-toggler {
@@ -229,7 +229,7 @@ a.botonGetStarted:hover {
 .boxFeatures {
     padding: 50px;
     background-color: #f6f6f6;
-    height: 100vh;
+    height: var(--section-height);
 }
 
 .features {
@@ -257,7 +257,7 @@ a.botonGetStarted:hover {
 }
 
 .cardFeatures a {
-    color: #02d2b5;
+    color: var(--link-color);
 }
 
 .cardFeatures:hover {
@@ -266,7 +266,7 @@ a.botonGetStarted:hover {
 }
 
 .cardFeatures span {
-    background: #00d2b5;
+    background: var(--second-bg-color);
     color: #fff;
     width: 35px;
     height: 35px;
@@ -295,7 +295,7 @@ a.botonGetStarted:hover {
     background-color: #fff;
     overflow: hidden;
     position: relative;
-    height: 100vh;
+    height: var(--section-height);
 }
 
 .callToActions {
@@ -404,7 +404,7 @@ a.botonGetStarted:hover {
 .boxAbout {
     padding: 50px;
     background-color: #f6f6f6;
-    height: 100vh;
+    height: var(--section-height);
 }
 
 .about {
@@ -478,7 +478,7 @@ a.botonGetStarted:hover {
 }
 
 .carousel-indicators li {
-    background-color: #20bf6b;
+    background-color: var(--main-bg-color);
 }
 
 .carousel-item {
@@ -515,15 +515,15 @@ a.botonGetStarted:hover {
     margin-top: 20px;
     color: #fff;
     padding: 8px 20px;
-    background-color: #20bf6b;
+    background-color: var(--main-bg-color);
     border-radius: 35px;
-    border: 2px solid #20bf6b;
+    border: 2px solid var(--main-bg-color);
     box-shadow: 0px 5px 18px rgba(0, 0, 0, .2);
     transition: all 0.3s ease 0s;
 }
 
 .botonEnviarMensaje:hover {
-    color: #20bf6b !important;
+    color: var(--main-bg-color) !important;
     background-color: transparent;
     border-radius: 6px;
     transition: all 0.3s ease 0s;

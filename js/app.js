@@ -1,5 +1,5 @@
 // AGREGA CLASE boxCardAnimated AL HACER SCROLL PARA ANIMAR COMPONENTE CARD 
-window.onscroll = function() {
+window.onscroll = function () {
 
     let scrollPosY = window.pageYOffset | document.body.scrollTop;
 
@@ -28,7 +28,7 @@ let mainNavLinks = document.querySelectorAll("nav div ul li a");
 window.addEventListener("scroll", event => {
     event.preventDefault();
 
-    let fromTop = window.scrollY;
+    let fromTop = window.scrollY + 200;
 
     mainNavLinks.forEach(link => {
         let section = document.querySelector(link.hash);
@@ -45,9 +45,9 @@ window.addEventListener("scroll", event => {
 
 
 // DESPLAZAMIENTO SMOOTH SCROLL
-window.onload = function() {
+window.onload = function () {
 
-    const easeInCubic = function(t) { return t * t * t }
+    const easeInCubic = function (t) { return t * t * t }
     const scrollElems = document.getElementsByClassName('scroll');
 
     const scrollToElem = (start, stamp, duration, scrollEndElemTop, startScrollOffset) => {
@@ -72,19 +72,19 @@ window.onload = function() {
     for (let i = 0; i < scrollElems.length; i++) {
         const elem = scrollElems[i];
 
-        elem.addEventListener('click', function(e) {
+        elem.addEventListener('click', function (e) {
             e.preventDefault();
             const scrollElemId = e.target.href.split('#')[1];
             const scrollEndElem = document.getElementById(scrollElemId);
 
             const anim = requestAnimationFrame(() => {
                 const stamp = new Date().getTime();
-                const duration = 1200;
+                const duration = 800;
                 const start = stamp;
 
-                const startScrollOffset = window.pageYOffset;
+                const startScrollOffset = window.pageYOffset;//donde se encuentra el scroll actualmente
 
-                const scrollEndElemTop = scrollEndElem.getBoundingClientRect().top;
+                const scrollEndElemTop = scrollEndElem.getBoundingClientRect().top;//dimensiones y posicion del elemento #
 
                 scrollToElem(start, stamp, duration, scrollEndElemTop, startScrollOffset);
             })
@@ -95,4 +95,8 @@ window.onload = function() {
 function enviarMensaje() {
     alert('Mensaje enviado con éxito!');
     document.getElementById("miForm").reset();
+}
+function scroll_to(anchor_id) {
+    var tag = $("#" + anchor_id + "");
+    $('html, body').animate({ scrollTop: tag.offset().top }, 800);
 }
