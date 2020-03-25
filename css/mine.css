@@ -1,9 +1,10 @@
 :root {
-    --main-bg-color: rgb(26, 120, 214);
+    --main-bg-color: rgb(32, 130, 228);
     --second-bg-color: #f1b62b;
     --third-bf-color: #3671c3;
     --link-color: #ffa963;
     --navbar-height: 62px;
+    --box-shadow: rgba(32, 119, 191, 0.4);
     /* --navbar-height: 0px; */
     --section-height: 100vh;
 }
@@ -90,38 +91,50 @@ button.botonEnviarMensaje {
 .boxCardCallToActions.boxCardAnimated {
     width: 95%;
 }
-.boxCallToActions{
+
+.boxCallToActions {
     padding-bottom: 7px;
 }
+
 .contenidoAbout p {
     width: 100%;
 }
-.contenido h3{
+
+.contenido h3 {
     margin-top: 20px;
 }
-.navbar-brand{
+
+.navbar-brand {
     display: block;
 }
-.navbar-brand>img{
+
+.navbar-brand>img {
     max-height: 30px;
 }
-.edukt{
-    color: var(--main-bg-color);
-    
-}
-.center-row{
+
+.center-row {
     display: flex !important;
     justify-content: center;
     align-items: center;
     flex-direction: row;
 }
-.maestro{
-    color: var(--second-bg-color);
+
+.edukt {
+    /* color: var(--main-bg-color); */
+    color:  rgb(2, 94, 187);
 }
-small.dot{
-    color: var(--main-bg-color);;
+
+.maestro {
+    /* color: var(--second-bg-color); */
+    color:  #f1b62b;
 }
-@media  (max-width: 576px) { 
+
+small.dot {
+    color: var(--main-bg-color);
+    ;
+}
+
+@media (max-width: 576px) {
     a.irArriba {
         bottom: 10px!important;
     }
