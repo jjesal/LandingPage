@@ -150,7 +150,24 @@ span.select2.select2-container.select2-container--default {
 .navbar-collapse{
     text-align: center;
 }
+#carouselExampleIndicators{
+    min-height: 235px !important;
+    height: auto !important;
+}
+#testimonio{
+    min-height: 233px !important;
+}
+ol{
+    margin-bottom: 0;
+}
 @media (max-width: 576px) {
+    #carouselExampleIndicators{
+        min-height: 420px !important;
+        height: auto !important;
+    }
+    #testimonio{
+        min-height: 419px !important;
+    }
     a.irArriba {
         bottom: 10px!important;
     }
