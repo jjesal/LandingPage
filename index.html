@@ -328,20 +328,20 @@
                             <select name="pais" class="form-control" placeholder="País" id="select-pais"></select>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="inputLastName"><b>Departamento</b></label>
-                            <select name="departamento" class="form-control" placeholder="Departamento"
-                                id="select-depa">
+                            <label for="inputLastName"><b>Ciudad</b></label>
+                            <select name="Ciudad" class="form-control" placeholder="Ciudad"
+                                id="select-ciudad">
                             </select>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputcode"><b>Código</b></label>
-                            <input type="text" class="form-control" id="inputcode" placeholder="+51" required>
+                            <input type="text" disabled class="form-control" id="inputcode" placeholder="Código..." required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputLastName"><b>Celular</b></label>
-                            <input type="text" class="form-control" id="inputLastName" placeholder="Celular..."
+                            <input type="number" class="form-control" id="inputLastName" placeholder="Celular..."
                                 required>
                         </div>
                     </div>
@@ -395,12 +395,13 @@
                     return { id: pais.text, text: pais.text, lista: pais.lista, code: pais.code }
                 })
                 console.log(maped);
+                $('#select-ciudad').select2({data:maped[0].lista});
                 $('#select-pais').select2({ data: maped });
-                $('#select-depa').select2();
+                
 
             })
             $('#select-pais').on("select2:select", (e) => {
-                $('#select-depa').empty();
+                $('#select-ciudad').empty();
                 var data = e.params.data;
                 $('#inputcode').val(data.code);
                 console.log('select: ', data);
@@ -408,14 +409,19 @@
                     return { id: depa, text: depa }
                 })
                 console.log('depas: ', depas)
-                $('#select-depa').select2({ data: depas });
-                // $('#select-depa').trigger('change');
+                $('#select-ciudad').select2({ data: depas });
+                // $('#select-ciudad').trigger('change');
             })
         });
+        // Detect all clicks on the document
+        document.addEventListener('click', function (event) {
+            console.log('event.target.id: ',event.target.querySelector('#scrollsections-navigation'));
+            
+        }, false);
         if ($(window).width() <= 576) {
-                    console.log('resize')
-                    window.destroy = true;
-                }
+            console.log('resize')
+            window.destroy = true;
+        }
         $(function () {
             if (!window.destroy) {
                 $('section.fixBox .title').hide(); // Hide all titles
