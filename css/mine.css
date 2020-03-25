@@ -99,13 +99,8 @@ button.botonEnviarMensaje {
 .contenido h3{
     margin-top: 20px;
 }
-/* .boxCallToActions {
-    position: relative;
+@media  (max-width: 576px) { 
+    a.irArriba {
+        bottom: 10px!important;
+    }
 }
-
-.callToActions {
-    position: absolute;
-    height: auto;
-    width: 80%;
-    left: 10%;
-} */
