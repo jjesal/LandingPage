@@ -385,7 +385,8 @@
             $('section.fixBox')
                 .scrollSections({
                     alwaysStartWithFirstSection: true, // force to load the page on the first section (prevent broswer caching)
-                    // createNavigation: false,
+                    createNavigation: true,
+                    touch:false,
                     before: function ($currentSection, $nextSection) {
 
                         _initFuturSection($nextSection);
