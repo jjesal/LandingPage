@@ -416,6 +416,9 @@
         // Detect all clicks on the document
         document.addEventListener('click', function (event) {
             console.log('event.target.id: ',event.target.querySelector('#scrollsections-navigation'));
+            if (event.target.querySelector('#scrollsections-navigation')==null) {
+                $('#navbarSupportedContent').collapse('hide')    
+            }
             
         }, false);
         if ($(window).width() <= 576) {
