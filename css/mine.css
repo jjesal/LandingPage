@@ -147,6 +147,9 @@ small.dot {
 span.select2.select2-container.select2-container--default {
     width: 100%!important;
 }
+.navbar-collapse{
+    text-align: center;
+}
 @media (max-width: 576px) {
     a.irArriba {
         bottom: 10px!important;
