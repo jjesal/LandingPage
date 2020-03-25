@@ -103,11 +103,17 @@ button.botonEnviarMensaje {
     display: block;
 }
 .navbar-brand>img{
-    max-height: 40px;
+    max-height: 30px;
 }
 .edukt{
     color: var(--main-bg-color);
     
+}
+.center-row{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 .maestro{
     color: var(--second-bg-color);
