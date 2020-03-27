@@ -11,6 +11,8 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="./libs/sweetalert/sweetalert2.9.js"></script>
     <script src="./libs/phonumbr/jquery.caret.js"></script>
     <script src="./libs/phonumbr/libphonenumber-js.min.js"></script>
     <script src="./libs/phonumbr/jquery.mobilePhoneNumber.js"></script>
@@ -90,14 +92,14 @@
                                 <div class="imgHeader">
 
                                     <div class="row">
-                                        <div class="col-sm-12"><img  src="images/landing_1.png" alt=""></div>
+                                        <div class="col-sm-12"><img src="images/landing_1.png" alt=""></div>
                                         <div class="col-sm-12">
                                             <p class="boxCardAnimated adaptate "><i>Adáptate,</i>
                                                 <br>
                                                 Únete al cambio mundial
                                             </p>
                                         </div>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -548,12 +550,44 @@
     <script src="js/dataApi.js"></script>
     <script src="js/app.js"></script>
     <script>
+        function enviar() {
+            let data = {
+                nombre: $('#inputName').val(),
+                apellidos: $('#inputLastName').val(),
+                correo: $('#inputEmail').val(),
+                pais: $('#select-pais').val(),
+                ciudad: $('#select-ciudad').val(),
+                numero: $('#inputcode1').val() + '' + $('#inputphone1').val(),
+                mensaje: $('#message').val()
+            }
+            fetch('./php/sendMail.php', {
+                method: 'POST',
+                body: JSON.stringify(data)
+            }).then(rpt => {
+                Swal.fire({
+                    title: 'Enviado',
+                    text: "En seguida nos pondremos en contacto contigo!",
+                    icon: 'success',
+
+                }).then((result) => {
+                    $('#inputName').val('');
+                    $('#inputLastName').val('');
+                    $('#inputEmail').val('');
+                    $('#select-pais').val('');
+                    $('#select-ciudad').val('');
+                    $('#inputcode1').val('') + '' + $('#inputphone1').val('');
+                    $('#message').val('');
+                })
+            })
+        }
+
         var sizeNumber = null;
         function validate() {
             let code = $('#inputcode1').val();
             let number = $('#inputphone1').val();
             if (libphonenumber.parsePhoneNumber(code + '' + number).isValid()) {
-
+                enviar();
+                return false;
             } else {
                 alert("El número que ingresaste no es valido");
                 return false;
