@@ -9,23 +9,22 @@
     <meta name="description" content="Landing Page">
     <title>EduktMaestro</title>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script> -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="./libs/phonumbr/jquery.caret.js"></script>
+    <script src="./libs/phonumbr/libphonenumber-js.min.js"></script>
+    <script src="./libs/phonumbr/jquery.mobilePhoneNumber.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" href="icons/icomoon.css">
     <link rel="stylesheet" href="libs/fontawesome/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="libs/scrollSections/jquery.scrollSections-0.4.3.min.css"> -->
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/mine.css">
+    <link rel="stylesheet" href="css/observaciones.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
-    <link rel="icon" 
-    type="image/png" 
-    href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" href="./images/favicon-32x32.png">
 
 </head>
 
@@ -70,26 +69,112 @@
                 <h1 class="title"><span class="edukt">Edukt</span><span class="maestro">Maestro</span><small
                         class="dot">.</small></h1>
             </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="boxHeader ">
+                            <div class="col-md-7">
+                                <div class="textosHeader">
+                                    <h1><b> Enseñanza Virtual</b></h1>
+                                    <p>Una Plataforma Virtual que permite a los
+                                        colegios, universidades, institutos e
+                                        instituciones en general, desarrollar sus
+                                        procesos de enseñanza y aprendizaje, con
+                                        su propia metodología.</p>
+                                    <a class="botonGetStarted" onclick="scroll_to('linkFeatures')" href="#"
+                                        rel="nofollow noopener">Saber
+                                        más</a>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="imgHeader">
+                                    <img src="images/landing_1.png" alt="">
+                                </div>
+                            </div>
 
-            <div class="boxHeader ">
-                <div class="textosHeader">
-                    <h1><b> Enseñanza Virtual</b></h1>
-                    <p>Una Plataforma Virtual que permite a los
-                        colegios, universidades, institutos e
-                        instituciones en general, desarrollar sus
-                        procesos de enseñanza y aprendizaje, con
-                        su propia metodología.</p>
 
-                    <a class="botonGetStarted" onclick="scroll_to('linkFeatures')" href="#"
-                        rel="nofollow noopener">Saber
-                        más</a>
+
+                        </div>
+                    </div>
 
                 </div>
+                <div class="col-md-4">
+                    <!-- Sección Contacto -->
+                    <section class="boxContacto fixBox oneFix obsContacto" id="linkContacto">
+                        <h3 class="title">Contáctanos</h3>
 
-                <div class="imgHeader">
-                    <img src="images/landing_1.png" alt="">
+                        <div class="container contacto">
+                            <form id="miForm" onsubmit="return validate()">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputName"><b>Nombres</b></label>
+                                        <input type="text" class="form-control" id="inputName" placeholder="Nombres..."
+                                            required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputLastName"><b>Apellidos</b></label>
+                                        <input type="text" class="form-control" id="inputLastName"
+                                            placeholder="Apellidos..." required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inputEmail"><b>Email</b></label>
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email..."
+                                        required>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputName"><b>País</b></label>
+                                        <select name="pais" required class="form-control" placeholder="País"
+                                            id="select-pais"></select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputLastName"><b>Ciudad</b></label>
+                                        <select name="Ciudad" required class="form-control" placeholder="Ciudad"
+                                            id="select-ciudad">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="inputcode"><b>Código</b></label>
+                                        <input type="text" disabled class="form-control" id="inputcode1"
+                                            placeholder="Código..." required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="inputLastName"><b>Celular</b></label>
+                                        <input type="text" pattern="[0-9 ]+" onkeypress="phone(this)"
+                                            onchange="phone(this)" class="form-control" id="inputphone1"
+                                            placeholder="Celular..." required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message"><b>Mensaje</b></label>
+                                    <textarea class="form-control" rows="3" id="message"
+                                        placeholder="Déjanos tus dudas..." required></textarea>
+                                </div>
+
+
+                                <button type="submit" class="botonEnviarMensaje">Quiero más Información</button>
+                            </form>
+                        </div>
+                    </section>
+                    <!-- Sección Contacto -->
+                </div>
+                <div class="col-md-12">
+                    {{ Quienes confian
+                        en nosotros y logos de los
+                        colegios que trabajan con
+                        nosotros: San Fabian,
+                        Florecillas de San
+                        Francisco, Los Olivos
+                        School, Abaco}}
                 </div>
             </div>
+
         </section>
 
     </header>
@@ -97,7 +182,7 @@
 
     <!-- Contenedor Main -->
     <main>
-        <a id="subir" class="icon-arrow-up scroll" href="#linkHome"></a>
+        <a id="subir" class="scroll obsButton2" href="#linkHome">Contactar</a>
         <!-- Sección Features -->
         <section class="boxFeatures fixBox" id="linkFeatures">
             <h3 class="title">Principales Características</h3>
@@ -165,13 +250,26 @@
                     <a href="#!">Saber Más</a>
                 </div> -->
             </div>
-
+            <div class="row">
+                <div class="col-md-12">
+                    {{pantallazo
+                        de la Plataforma,
+                        para generar una
+                        vista y crear
+                        familiarizacion con
+                        la misma. Que
+                        haga juego con el
+                        diseno que se esta
+                        implementando}}
+                </div>
+            </div>
         </section>
         <!-- Fin Sección Features -->
 
         <!-- Sección Call To Actions -->
         <section id="callToActions" class="boxCallToActions fixBox">
-            <div class="callToActions row">
+         <div class="row">
+            <div class="callToActions">
                 <div class="col-md-6 col-sm-12">
                     <div class="imgCallToActions">
                         <img src="images/pic1.png" alt="">
@@ -180,10 +278,10 @@
                 <div class="col-md-6 col-sm-12">
                     <article class="contenido ">
                         <h3 class="title">¿Cómo funciona?</h3>
-                        <p>
+                        <!-- <p>
                             La puesta en marcha requiere de una semana para capacitar a:
 
-                        </p>
+                        </p> -->
 
                         <ul>
                             <li> <span class="icon-check"></span> Docentes: Uso y manejo de la plataforma, creación de
@@ -225,6 +323,10 @@
                     </article>
                 </div>
             </div>
+         </div>
+            <div class="row"><div class="col-md-12">{{Aqui usar mas vectores para graficar el
+                proceso de como funciona, quitar el
+                texto que dice una semana.}}</div></div>
         </section>
         <!-- Fin Sección Call To Actions -->
 
@@ -235,7 +337,8 @@
 
             <div class="about">
                 <div class="imgAbout">
-                    <img src="images/about_1.jpg" alt="">
+                    {{Una imagen mas Latina.}}
+                    <!-- <img src="images/about_1.jpg" alt=""> -->
                 </div>
 
                 <article class="contenidoAbout">
@@ -270,33 +373,37 @@
                     <div class="carousel-inner" id="testimonio">
                         <div class="carousel-item active">
                             <img class="d-block mx-auto" src="./images/pp1.png" alt="">
-                            <p class="text-center sliderText">Hola, les escribo para informarles que ya finalice mi paquete
+                            <p class="text-center sliderText">Hola, les escribo para informarles que ya finalice mi
+                                paquete
                                 de cursos office 2016 intermedio. Me encanto su plataforma, los felicito. Es super,
                                 didáctica, aprendí muchísimo.
-                                Recomendare EduktVitual a mis amigos y familiares, quedo a la espera de mi certificado.</p>
+                                Recomendare EduktVitual a mis amigos y familiares, quedo a la espera de mi certificado.
+                            </p>
                             <p class="text-center"><b>Gabriela</b></p>
                         </div>
-    
+
                         <div class="carousel-item">
                             <img class="d-block mx-auto" src="./images/pp2.png" alt="">
-                            <p class="text-center sliderText">Yo ya terminé Word básico, intermedio ya avanzado, ahora me
+                            <p class="text-center sliderText">Yo ya terminé Word básico, intermedio ya avanzado, ahora
+                                me
                                 encuentro en PowerPoint básico.
                                 Están muy buenos los cursos. Solo que requiere concentración y mucho empeño.</p>
                             <p class="text-center"><b>Alcides</b></p>
                         </div>
-    
+
                         <div class="carousel-item">
                             <img class="d-block mx-auto" src="./images/pp3.png" alt="">
                             <p class="text-center sliderText">Es muy didáctico, me gusta mucho la parte de curso de
-                                ejemplificación en el cual voy ingresando los valores como si un profesor estuviera conmigo,
+                                ejemplificación en el cual voy ingresando los valores como si un profesor estuviera
+                                conmigo,
                                 es la primera vez que interactúo con una opción así, eso lo hace diferente a otras
                                 capacitaciones virtuales.
                                 La plataforma es buena y se entiende, además de toda la información que se brinda.</p>
                             <p class="text-center"><b>Jorge Luis</b></p>
                         </div>
                     </div>
-    
-    
+
+
                 </div>
             </div>
 
@@ -329,11 +436,12 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputName"><b>País</b></label>
-                            <select name="pais" class="form-control" placeholder="País" id="select-pais"></select>
+                            <select name="pais" required class="form-control" placeholder="País"
+                                id="select-pais"></select>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="inputLastName"><b>Ciudad</b></label>
-                            <select name="Ciudad" class="form-control" placeholder="Ciudad" id="select-ciudad">
+                            <select name="Ciudad" required class="form-control" placeholder="Ciudad" id="select-ciudad">
                             </select>
                         </div>
                     </div>
@@ -365,7 +473,7 @@
 
     </main>
     <!-- Fin Contenedor Main -->
-
+    <!-- <a class="botonGetStarted obsButton" onclick="scroll_to('linkContacto')" href="#linkContacto">Contactar</a> -->
     <!-- Contenedor Footer -->
     <footer class="footer">
         <div class="boxTextFooter">
@@ -389,6 +497,47 @@
     <script src="js/dataApi.js"></script>
     <script src="js/app.js"></script>
     <script>
+        var sizeNumber = null;
+        function validate() {
+            let code = $('#inputcode1').val();
+            let number = $('#inputphone1').val();
+            if (libphonenumber.parsePhoneNumber(code + '' + number).isValid()) {
+
+            } else {
+                alert("El número que ingresaste no es valido");
+                return false;
+            }
+
+        }
+        var code; var number;
+        function phone(e) {
+            console.log('key pressed');
+            code = $('#inputcode1').val();
+            if (code.substring(0, 1) == '+') {
+                console.log('ok, codigo valido: ', code)
+                let id = "#" + e.id;
+                // console.log('es valido? ',$(id).mobilePhoneNumber('validate'));
+                number = $(id).val();
+                if (libphonenumber.parsePhoneNumber(code + '' + number).isValid()) {//NUMERO COMPLETO Y VALIDO
+                    number = libphonenumber.parsePhoneNumber(code + '' + number).formatNational();
+                    $(id).prop('maxlength', number.length);
+                    sizeNumber = number.length;
+                    $(id).val(number);
+                    console.log('es valido')
+                }
+                if (sizeNumber != null) {
+                    // let tmpNumber = $(id).val();
+                    // console.log('formated ',libphonenumber.parsePhoneNumber(code + '' + number).formatNational());
+                    // console.log('number: ', tmpNumber.length, 'size: ', sizeNumber)
+                    // if (tmpNumber.length+1 >sizeNumber) {
+                    //     $(id).val(tmpNumber.substring(0, sizeNumber));
+                    // } else {
+
+                    // }
+                }
+            }
+
+        }
         $(document).ready(function () {
             fetch('./json/countries.json', {
                 method: 'GET',
@@ -407,14 +556,19 @@
             $('#select-pais').on("select2:select", (e) => {
                 $('#select-ciudad').empty();
                 var data = e.params.data;
-                $('#inputcode').val(data.code);
-                console.log('select: ', data);
-                let depas = data.lista.map(depa => {
-                    return { id: depa, text: depa }
-                })
-                console.log('depas: ', depas)
-                $('#select-ciudad').select2({ data: depas });
-                // $('#select-ciudad').trigger('change');
+                if (data.code != "") {
+                    $('#inputcode1').val(data.code);
+                    goodPhone = '';
+                    $('#inputphone1').val('');
+                    $('#inputphone1').mobilePhoneNumber({
+                        defaultPrefix: data.code
+                    });
+                    let depas = data.lista.map(depa => {
+                        return { id: depa, text: depa }
+                    })
+                    $('#select-ciudad').select2({ data: depas });
+                }
+
             })
         });
         // Detect all clicks on the document

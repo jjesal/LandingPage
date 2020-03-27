@@ -1,0 +1,102 @@
+nav.navbar.fixed-top {
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, .2)!important;
+}
+
+header {
+    height: auto !important;
+    background-color: #f6f6f6;
+}
+div.boxCardCallToActions.boxCardAnimated{
+    position: relative !important;
+}
+.boxContacto>h3.title {
+    font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.obsButton {
+    position: fixed !important;
+    bottom: 50px !important;
+    left: 2% !important;
+    border: 2px solid var(--third-bg-color) !important;
+    /* webkit-backdrop-filter: saturate(180%) blur(20px) !important; */
+    backdrop-filter: saturate(180%) blur(30px) !important;
+    background-color: transparent !important;
+    color: var(--edukt) !important;
+    /* padding: 6px 12px !important; */
+    width: auto !important;
+}
+.obsButton2 {
+
+    border: 2px solid var(--third-bg-color) !important;
+    /* webkit-backdrop-filter: saturate(180%) blur(20px) !important; */
+    backdrop-filter: saturate(180%) blur(30px) !important;
+    background-color: transparent !important;
+    color: var(--edukt) !important;
+    padding: 8px 20px !important;
+    height: auto !important;
+    width: auto !important;
+}
+
+.obsContacto {
+    padding: 0 !important;
+    /* background-color: white; */
+}
+
+.obsContacto>.contacto {
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .1);
+    border-radius: 20px;
+    margin: 0 !important;
+    margin: auto !important;
+    width: 100%;
+    max-width: 370px;
+    padding: 35px 30px;
+    /* max-width: ; */
+}
+
+.features {
+    padding: 0 !important;
+    max-width: 1250px !important;
+}
+
+.cardFeatures {
+    width: 32% !important;
+}
+
+.cardFeatures>span {
+    width: 55px !important;
+    height: 55px !important;
+}
+
+.cardFeatures>span>i {
+    font-size: 25px !important;
+}
+
+.cardFeatures>h4 {
+    font-size: 20px !important;
+}
+
+.cardFeatures>p {
+    font-size: 16px !important;
+    color: #8f8f8f !important;
+}
+
+.textosHeader {
+    padding: 0;
+    width: 100% !important;
+    left: 0 !important;
+    padding-left: 10%;
+    max-width: 470px;
+}
+
+.textosHeader>h1, p {
+    width: 100% !important;
+}
+
+.textosHeader>p {
+    width: 100% !important;
+    font-size: 21px !important;
+}
+
+.imgHeader {
+    right: 0 !important;
+}
