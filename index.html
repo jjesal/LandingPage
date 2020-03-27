@@ -57,9 +57,9 @@
                         <a class="nav-link scroll" onclick="scroll_to('linkTestimonial')"
                             href="#linkTestimonial">Testimonios</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link scroll" onclick="scroll_to('linkContacto')" href="#linkContacto">Contacto</a>
-                    </li>
+                    </li> -->
 
                 </ul>
             </div>
@@ -165,7 +165,7 @@
                     <!-- Sección Contacto -->
                 </div>
                 <div class="col-md-12">
-                    <div class="row my-font title-empresas">Casos de exito</div>
+                    <div class="row my-font title-empresas">Casos de exito:</div>
                     <div class="row my-row empresas">
                         <img src="./images/empresas/Emp6.jpg" alt="">
                         <img src="./images/empresas/LOGO-LOC.png" alt="">
@@ -254,17 +254,17 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-            
-                        <div class="row pantallazo">
-                            <div class="col-md-4 center">
-                                <img src="./images/vectors/1.png" alt="" srcset="">
-                            </div>
-                            <div class="col-md-8 center screen">
-                                <img src="./images/screen-1515324_640.png" alt="" srcset="">
-                        
-                            </div>
-                            
+
+                    <div class="row pantallazo">
+                        <div class="col-md-5 center">
+                            <img src="./images/vectors/1.png" alt="" srcset="">
                         </div>
+                        <div class="col-md-7 center screen">
+                            <img src="./images/screen-1515324_640.png" alt="" srcset="">
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -331,10 +331,17 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">{{Aqui usar mas vectores para graficar el
-                proceso de como funciona, quitar el
-                texto que dice una semana.}}
-                    <img src="./images/responsive.png" alt="" srcset="">
+                <div class="col-md-12">
+                    <div class="row responsive-cont">
+                        <div class="col-md-6 center">
+                            <p class="my-font text-center boxCardAnimated">Accede en cualquier lugar, desde cualquier
+                                dispositivo</p>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="./images/responsive-mine.png" alt="" srcset="">
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -379,6 +386,7 @@
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
                     </ol>
                     <div class="carousel-inner" id="testimonio">
                         <div class="carousel-item active">
@@ -411,6 +419,13 @@
                                 La plataforma es buena y se entiende, además de toda la información que se brinda.</p>
                             <p class="text-center"><b>Jorge Luis</b></p>
                         </div>
+                       
+                        <div class="carousel-item">
+                            <video class="video" controls >
+                                <source  src="http://www.learn.eduktvirtual.com/filealumno/26042018080511.mp4" type="video/mp4">
+                            </video>
+                            
+                        </div>
                     </div>
 
 
@@ -421,7 +436,7 @@
         <!-- Fin Sección Testimonios -->
 
         <!-- Sección Contacto -->
-        <section class="boxContacto fixBox oneFix" id="linkContacto">
+        <!-- <section class="boxContacto fixBox oneFix" id="linkContacto">
             <h3 class="title">Contáctate Con Nosotros</h3>
 
             <div class="container contacto">
@@ -478,7 +493,7 @@
                     <button type="submit" class="botonEnviarMensaje">Quiero más Información</button>
                 </form>
             </div>
-        </section>
+        </section> -->
         <!-- Sección Contacto -->
 
     </main>
@@ -507,143 +522,143 @@
     <script src="js/dataApi.js"></script>
     <script src="js/app.js"></script>
     <script>
-        // var sizeNumber = null;
-        // function validate() {
-        //     let code = $('#inputcode1').val();
-        //     let number = $('#inputphone1').val();
-        //     if (libphonenumber.parsePhoneNumber(code + '' + number).isValid()) {
+        var sizeNumber = null;
+        function validate() {
+            let code = $('#inputcode1').val();
+            let number = $('#inputphone1').val();
+            if (libphonenumber.parsePhoneNumber(code + '' + number).isValid()) {
 
-        //     } else {
-        //         alert("El número que ingresaste no es valido");
-        //         return false;
-        //     }
+            } else {
+                alert("El número que ingresaste no es valido");
+                return false;
+            }
 
-        // }
-        // var code; var number;
-        // function phone(e) {
-        //     console.log('key pressed');
-        //     code = $('#inputcode1').val();
-        //     if (code.substring(0, 1) == '+') {
-        //         console.log('ok, codigo valido: ', code)
-        //         let id = "#" + e.id;
-        //         // console.log('es valido? ',$(id).mobilePhoneNumber('validate'));
-        //         number = $(id).val();
-        //         if (libphonenumber.parsePhoneNumber(code + '' + number).isValid()) {//NUMERO COMPLETO Y VALIDO
-        //             number = libphonenumber.parsePhoneNumber(code + '' + number).formatNational();
-        //             $(id).prop('maxlength', number.length);
-        //             sizeNumber = number.length;
-        //             $(id).val(number);
-        //             console.log('es valido')
-        //         }
-        //         if (sizeNumber != null) {
-        //             // let tmpNumber = $(id).val();
-        //             // console.log('formated ',libphonenumber.parsePhoneNumber(code + '' + number).formatNational());
-        //             // console.log('number: ', tmpNumber.length, 'size: ', sizeNumber)
-        //             // if (tmpNumber.length+1 >sizeNumber) {
-        //             //     $(id).val(tmpNumber.substring(0, sizeNumber));
-        //             // } else {
+        }
+        var code; var number;
+        function phone(e) {
+            console.log('key pressed');
+            code = $('#inputcode1').val();
+            if (code.substring(0, 1) == '+') {
+                console.log('ok, codigo valido: ', code)
+                let id = "#" + e.id;
+                // console.log('es valido? ',$(id).mobilePhoneNumber('validate'));
+                number = $(id).val();
+                if (libphonenumber.parsePhoneNumber(code + '' + number).isValid()) {//NUMERO COMPLETO Y VALIDO
+                    number = libphonenumber.parsePhoneNumber(code + '' + number).formatNational();
+                    $(id).prop('maxlength', number.length);
+                    sizeNumber = number.length;
+                    $(id).val(number);
+                    console.log('es valido')
+                }
+                if (sizeNumber != null) {
+                    // let tmpNumber = $(id).val();
+                    // console.log('formated ',libphonenumber.parsePhoneNumber(code + '' + number).formatNational());
+                    // console.log('number: ', tmpNumber.length, 'size: ', sizeNumber)
+                    // if (tmpNumber.length+1 >sizeNumber) {
+                    //     $(id).val(tmpNumber.substring(0, sizeNumber));
+                    // } else {
 
-        //             // }
-        //         }
-        //     }
+                    // }
+                }
+            }
 
-        // }
-        // $(document).ready(function () {
-        //     fetch('./json/countries.json', {
-        //         method: 'GET',
-        //     }).then(rsp => {
-        //         return rsp.json();
-        //     }).then(paises => {
-        //         let maped = paises.map(pais => {
-        //             return { id: pais.text, text: pais.text, lista: pais.lista, code: pais.code }
-        //         })
-        //         console.log(maped);
-        //         $('#select-ciudad').select2({ data: maped[0].lista });
-        //         $('#select-pais').select2({ data: maped });
-
-
-        //     })
-        //     $('#select-pais').on("select2:select", (e) => {
-        //         $('#select-ciudad').empty();
-        //         var data = e.params.data;
-        //         if (data.code != "") {
-        //             $('#inputcode1').val(data.code);
-        //             goodPhone = '';
-        //             $('#inputphone1').val('');
-        //             $('#inputphone1').mobilePhoneNumber({
-        //                 defaultPrefix: data.code
-        //             });
-        //             let depas = data.lista.map(depa => {
-        //                 return { id: depa, text: depa }
-        //             })
-        //             $('#select-ciudad').select2({ data: depas });
-        //         }
-
-        //     })
-        // });
-        // // Detect all clicks on the document
-        // document.addEventListener('click', function (event) {
-        //     console.log('event.target.id: ', event.target.querySelector('#scrollsections-navigation'));
-        //     if (event.target.querySelector('#scrollsections-navigation') == null) {
-        //         $('#navbarSupportedContent').collapse('hide')
-        //     }
-
-        // }, false);
-        // if ($(window).width() <= 576) {
-        //     console.log('resize')
-        //     window.destroy = true;
-        // }
-        // $(function () {
-        //     if (!window.destroy) {
-        //         $('section.fixBox .title').hide(); // Hide all titles
-        //         $('section.fixBox')
-        //             .scrollSections({
-        //                 alwaysStartWithFirstSection: true, // force to load the page on the first section (prevent broswer caching)
-        //                 createNavigation: false,
-        //                 touch: false,
-        //                 before: function ($currentSection, $nextSection) {
-        //                     _initFuturSection($nextSection);
-        //                 },
-        //                 after: function ($currentSection, $previousSection) {
-        //                     _initNewSection($currentSection, $previousSection);
-        //                 }
-        //             });
-        //     }
+        }
+        $(document).ready(function () {
+            fetch('./json/countries.json', {
+                method: 'GET',
+            }).then(rsp => {
+                return rsp.json();
+            }).then(paises => {
+                let maped = paises.map(pais => {
+                    return { id: pais.text, text: pais.text, lista: pais.lista, code: pais.code }
+                })
+                console.log(maped);
+                $('#select-ciudad').select2({ data: maped[0].lista });
+                $('#select-pais').select2({ data: maped });
 
 
-        //     function _initNewSection($section, $prevSection) {
+            })
+            $('#select-pais').on("select2:select", (e) => {
+                $('#select-ciudad').empty();
+                var data = e.params.data;
+                if (data.code != "") {
+                    $('#inputcode1').val(data.code);
+                    goodPhone = '';
+                    $('#inputphone1').val('');
+                    $('#inputphone1').mobilePhoneNumber({
+                        defaultPrefix: data.code
+                    });
+                    let depas = data.lista.map(depa => {
+                        return { id: depa, text: depa }
+                    })
+                    $('#select-ciudad').select2({ data: depas });
+                }
 
-        //         // Do some stuff each time this new section ends animating
+            })
+        });
+        // Detect all clicks on the document
+        document.addEventListener('click', function (event) {
+            console.log('event.target.id: ', event.target.querySelector('#scrollsections-navigation'));
+            if (event.target.querySelector('#scrollsections-navigation') == null) {
+                $('#navbarSupportedContent').collapse('hide')
+            }
 
-        //         // Only if there is a previous section (its null on first scroll)
-        //         if ($prevSection) {
-        //             // $('.title', $prevSection).hide(); // Hide old section title
-        //         }
-        //         $('.title', $section).fadeIn(); // Fade in current section title
+        }, false);
+        if ($(window).width() <= 576) {
+            console.log('resize')
+            window.destroy = true;
+        }
+        $(function () {
+            if (!window.destroy) {
+                $('section.fixBox .title').hide(); // Hide all titles
+                $('section.fixBox')
+                    .scrollSections({
+                        alwaysStartWithFirstSection: true, // force to load the page on the first section (prevent broswer caching)
+                        createNavigation: false,
+                        touch: false,
+                        before: function ($currentSection, $nextSection) {
+                            _initFuturSection($nextSection);
+                        },
+                        after: function ($currentSection, $previousSection) {
+                            _initNewSection($currentSection, $previousSection);
+                        }
+                    });
+            }
 
-        //         // Do some stuffs only on first init
-        //         if (!$section.data('isInit')) {
-        //             // Create slider for example
-        //             // $('.selector', $section).slider();
 
-        //             // Singleton
-        //             $section.data('isInit', true);
-        //         }
-        //     }
+            function _initNewSection($section, $prevSection) {
 
-        //     function _initFuturSection($section) {
+                // Do some stuff each time this new section ends animating
 
-        //         // Do some stuff each time before this section appears
-        //         // $('.title', $section).hide();
-        //     }
-        //     $(window).resize(function () {
-        //         if ($(window).width() <= 576) {
-        //             console.log('resize')
-        //             window.destroy = true;
-        //         }
-        //     });
+                // Only if there is a previous section (its null on first scroll)
+                if ($prevSection) {
+                    // $('.title', $prevSection).hide(); // Hide old section title
+                }
+                $('.title', $section).fadeIn(); // Fade in current section title
 
-        // });
+                // Do some stuffs only on first init
+                if (!$section.data('isInit')) {
+                    // Create slider for example
+                    // $('.selector', $section).slider();
+
+                    // Singleton
+                    $section.data('isInit', true);
+                }
+            }
+
+            function _initFuturSection($section) {
+
+                // Do some stuff each time before this section appears
+                // $('.title', $section).hide();
+            }
+            $(window).resize(function () {
+                if ($(window).width() <= 576) {
+                    console.log('resize')
+                    window.destroy = true;
+                }
+            });
+
+        });
     </script>
 </body>
 

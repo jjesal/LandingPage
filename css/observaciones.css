@@ -1,3 +1,18 @@
+.video{
+    max-height: 200px;
+}
+footer.footer{
+    background-color: #f6f6f6;
+    text-align: center;
+
+}
+.responsive-cont{
+    margin-top: 20px;
+}
+.responsive-cont>div>p{
+    color: black;
+    font-size: 22px;
+}
 .pantallazo{
     margin-top: 25px;
 }
@@ -76,20 +91,10 @@ div.boxCardCallToActions.boxCardAnimated {
     font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.obsButton {
-    position: fixed !important;
-    bottom: 50px !important;
-    left: 2% !important;
-    border: 2px solid var(--third-bg-color) !important;
-    /* webkit-backdrop-filter: saturate(180%) blur(20px) !important; */
-    backdrop-filter: saturate(180%) blur(30px) !important;
-    background-color: transparent !important;
-    color: var(--edukt) !important;
-    /* padding: 6px 12px !important; */
-    width: auto !important;
-}
 
 .obsButton2 {
+    font-style: italic;
+    color: rgb(70, 149, 228) !important;
     border: 2px solid var(--third-bg-color) !important;
     /* webkit-backdrop-filter: saturate(180%) blur(20px) !important; */
     backdrop-filter: saturate(180%) blur(30px) !important;
@@ -98,6 +103,8 @@ div.boxCardCallToActions.boxCardAnimated {
     padding: 8px 20px !important;
     height: auto !important;
     width: auto !important;
+    font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif !important;
+    font-weight: 600 !important;
 }
 
 .obsContacto {
