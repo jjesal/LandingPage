@@ -1,12 +1,30 @@
+.pantallazo{
+    margin-top: 25px;
+}
+.pantallazo>div>img{
+    max-height: 200px;
+    margin: auto;
+}
+.pantallazo>div.screen>img{
+    max-height: 270px ;
+}
 .empresas {
     padding: 0;
     margin: 0;
     background-color: white;
     margin-top: 5px;
     position: relative;
+    border-radius: 10px;
+}
+.no-mg{
+    margin: 0 !important;
 }
 .my-font{
     font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 20px;
+    color: #818181;
+    font-weight: 700;
 }
 .title-empresas{
     padding-left: 20px;
