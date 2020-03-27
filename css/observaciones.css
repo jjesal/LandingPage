@@ -1,3 +1,20 @@
+.y-center{
+    display: flex;
+    align-items: center;
+}
+.boxSlider{
+    position: relative;
+}
+.texto-demo{
+    position: absolute;
+    bottom: 30px;
+}
+.texto-demo>a{
+    font-weight: 600;
+    font-size: 22px;
+    font-style: italic;
+    font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+}
 @media screen and (max-width:800px){
     .adaptate{
         font-size: 15px;
@@ -9,10 +26,8 @@
 }
 .adaptate{
     font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 25px;
-    color: #f1ad42;
-    font-size: 25px;
-    
+    font-size: 32px;
+    color: #f1ad42;    
 }
 .video{
     max-height: 200px;
@@ -149,20 +164,23 @@ div.boxCardCallToActions.boxCardAnimated {
     width: 32% ;
 }
 
-.cardFeatures>span {
+.cardFeatures>div>span {
     width: 55px !important;
     height: 55px !important;
+    margin-bottom: 0 !important;
 }
 
-.cardFeatures>span>i {
+.cardFeatures>div>span>i {
     font-size: 25px !important;
 }
 
-.cardFeatures>h4 {
+.cardFeatures>div>h4 {
     font-size: 20px !important;
+    margin-bottom: 0 !important;
 }
 
 .cardFeatures>p {
+    margin-top: 12px;
     font-size: 16px !important;
     color: #8f8f8f !important;
 }
