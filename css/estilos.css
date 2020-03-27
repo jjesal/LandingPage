@@ -583,7 +583,7 @@ a.botonGetStarted:hover {
     }
     .boxHeader {
         flex-wrap: wrap;
-        height: 900px;
+        min-height: 900px;
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
