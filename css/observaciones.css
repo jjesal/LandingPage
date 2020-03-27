@@ -20,8 +20,9 @@ footer.footer{
     max-height: 200px;
     margin: auto;
 }
-.pantallazo>div.screen>img{
+img{
     max-height: 270px ;
+    max-width: 100%;
 }
 .empresas {
     padding: 0;
@@ -129,7 +130,7 @@ div.boxCardCallToActions.boxCardAnimated {
 }
 
 .cardFeatures {
-    width: 32% !important;
+    width: 32% ;
 }
 
 .cardFeatures>span {

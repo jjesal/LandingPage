@@ -628,8 +628,11 @@ a.botonGetStarted:hover {
         width: 90%;
     }
     .cardFeatures {
-        width: 100%;
+        width: 100% !important;
         margin-bottom: 1rem;
+    }
+    .boxFeatures{
+        padding: 15px;
     }
     /* ESTILOS CALL TO ACTIONS */
     .boxCallToActions {
