@@ -1,3 +1,9 @@
+.slogan{
+    font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+    font-style: italic;
+    color:#000b52;
+}
 .y-center{
     display: flex;
     align-items: center;
