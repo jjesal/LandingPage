@@ -202,7 +202,7 @@
 
     <!-- Contenedor Main -->
     <main>
-        <a id="subir" class="scroll obsButton2" href="#linkHome">Contactar</a>
+        <a id="subir" class="scroll obsButton2" href="#linkContacto">Contactar</a>
         <!-- Sección Features -->
         <section class="boxFeatures fixBox" id="linkFeatures">
             <h3 class="title">Principales Características</h3>
@@ -253,9 +253,7 @@
                         de la plataforma, puede supervisar
                         directamente el proceso de enseñanza y
                         aprendizaje.
-                        <!-- Los estudiantes podrán de manera fácil y rápida subir sus tareas conforme
-                        van desarrollando su curso. A la vez podrán enviar un mensaje al docente
-                        indicando sus dudas o indicando que ya resolvieron su tarea. -->
+
                     </p>
                     <a href="#!">Saber Más</a>
                 </div>
@@ -312,30 +310,8 @@
                     <a href="#!">Saber Más</a>
                 </div>
 
-                <!-- 
-                <div class="cardFeatures">
-                    <span class="icon-refresh"></span>
-                    <h4>Titulo</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita odit est ullam quis recusandae
-                        ab illum sunt ut in excepturi tenetur a.</p>
-                    <a href="#!">Saber Más</a>
-                </div> -->
             </div>
-            <!-- <div class="row">
-                <div class="col-md-12">
 
-                    <div class="row pantallazo">
-                        <div class="col-md-5 center">
-                            <img src="./images/vectors/1.png" alt="" srcset="">
-                        </div>
-                        <div class="col-md-7 center screen">
-                            <img src="./images/screen-1515324_640.png" alt="" srcset="">
-
-                        </div>
-
-                    </div>
-                </div>
-            </div> -->
         </section>
         <!-- Fin Sección Features -->
 
@@ -351,11 +327,7 @@
                     <div class="col-md-6 col-sm-12">
                         <article class="contenido ">
                             <h3 class="title">¿Cómo funciona?</h3>
-                            <!-- <p>
-                            La puesta en marcha requiere de una semana para capacitar a:
-
-                        </p> -->
-
+                           
                             <ul>
                                 <li> <span class="icon-check"></span> Docentes: Uso y manejo de la plataforma, creación
                                     de
@@ -594,7 +566,6 @@
     <!-- <script src="libs/scrollSections/scroll-startstop.events.jquery.js"></script> -->
     <script src="libs/scrollSections/plugins.js"></script>
     <script src="libs/scrollSections/modernizr-2.5.3.min.js"></script>
-    <!-- <script src="libs/scrollSections/jquery.mousewheel.min.js"></script> -->
     <script src="libs/scrollSections/jquery.scrollSections-0.4.3.min.js"></script>
     <script src="js/dataApi.js"></script>
     <script src="js/app.js"></script>
@@ -717,57 +688,7 @@
             console.log('resize')
             window.destroy = true;
         }
-        // $(function () {
-        //     if (!window.destroy) {
-        //         $('section.fixBox .title').hide(); // Hide all titles
-        //         $('section.fixBox')
-        //             .scrollSections({
-        //                 alwaysStartWithFirstSection: true, // force to load the page on the first section (prevent broswer caching)
-        //                 createNavigation: false,
-        //                 touch: false,
-        //                 before: function ($currentSection, $nextSection) {
-        //                     _initFuturSection($nextSection);
-        //                 },
-        //                 after: function ($currentSection, $previousSection) {
-        //                     _initNewSection($currentSection, $previousSection);
-        //                 }
-        //             });
-        //     }
 
-
-        //     function _initNewSection($section, $prevSection) {
-
-        //         // Do some stuff each time this new section ends animating
-
-        //         // Only if there is a previous section (its null on first scroll)
-        //         if ($prevSection) {
-        //             // $('.title', $prevSection).hide(); // Hide old section title
-        //         }
-        //         $('.title', $section).fadeIn(); // Fade in current section title
-
-        //         // Do some stuffs only on first init
-        //         if (!$section.data('isInit')) {
-        //             // Create slider for example
-        //             // $('.selector', $section).slider();
-
-        //             // Singleton
-        //             $section.data('isInit', true);
-        //         }
-        //     }
-
-        //     function _initFuturSection($section) {
-
-        //         // Do some stuff each time before this section appears
-        //         // $('.title', $section).hide();
-        //     }
-        //     $(window).resize(function () {
-        //         if ($(window).width() <= 576) {
-        //             console.log('resize')
-        //             window.destroy = true;
-        //         }
-        //     });
-
-        // });
     </script>
 </body>
 
