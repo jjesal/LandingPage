@@ -3,7 +3,7 @@
     --second-bg-color: #f1b62b;
     --third-bg-color: #5ea1ff;
     --link-color: #ffa963;
-    --navbar-height: 62px;
+    --navbar-height: 97px;
     --edukt:rgb(2, 94, 187);
     --maestro:#f1b62b;
     --box-shadow: rgba(32, 119, 191, 0.4);
@@ -139,6 +139,7 @@ button.botonEnviarMensaje {
 
 .navbar-brand>img {
     max-height: 30px;
+    /* max-height: 59px; */
 }
 
 .center-row {

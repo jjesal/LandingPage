@@ -1,3 +1,65 @@
+/* .new-testimonial-cont>*{
+    width: min-content;
+    margin: auto;
+} */
+.new-testimonial-cont>h4,h5{
+    text-align: center;
+}
+.carousel-item img {
+    border-radius: 0;
+}
+
+.prezi{
+    width: auto !important;
+}
+ul.my-row>li{
+    list-style: none;
+}
+ul.my-row>li>img{
+    height: 35px !important;
+    width: 40px ;
+    padding-right: 7px;
+}
+nav.navbar{
+    padding: 0 !important;
+   } 
+a.irArriba{
+    text-shadow:
+    1px  1px 2px white,
+    1px -1px 2px white,
+   -1px  1px 2px white,
+   -1px -1px 2px white !important;
+   backdrop-filter: saturate(180%) blur(20px) !important;
+   background-color: rgba(255, 255, 255, .72) !important;
+}
+footer.footer{
+    /* display: none !important; */
+}
+.boxContacto{
+    /* padding: 0  !important;
+    padding-top: 15px !important; */
+    
+
+}
+.nav-link:hover{
+border: none !important;
+color: rgb(165, 165, 165) !important;
+}
+footer.new-footer a{
+    color: white !important;
+}
+footer.new-footer{
+    min-height: 180px;
+    height: auto !important;
+    background-color: rgb(2, 94, 187) !important;
+color: white !important;
+}
+.fix-font-size{
+    font-size: 1vw;
+}
+img.logo-fix{
+    max-height: 65px !important;
+}
 .slogan{
     font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 25px;
@@ -166,13 +228,16 @@ div.boxCardCallToActions.boxCardAnimated {
 }
 
 .cardFeatures>div>span {
-    width: 55px !important;
-    height: 55px !important;
+    /* width: 55px !important;
+    height: 55px !important; */
+    width: 70px !important;
+    height: 70px !important;
     margin-bottom: 0 !important;
 }
 
 .cardFeatures>div>span>i {
-    font-size: 25px !important;
+    /* font-size: 25px !important; */
+    font-size: 35px !important;
 }
 
 .cardFeatures>div>h4 {
@@ -207,7 +272,8 @@ div.boxCardCallToActions.boxCardAnimated {
     right: 0 !important;
 }
 .imgAbout{
-    background-image: url(../images/startup-594090_640.jpg);
+    background-image: url(https://smartknowledge-solutions.com/image/backgroundproducto.jpg);
     background-repeat: no-repeat;
     object-fit: fill;
+    background-size: cover;
 }
