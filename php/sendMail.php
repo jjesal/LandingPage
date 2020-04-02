@@ -12,8 +12,10 @@ $cuerpo = "
             Apellidos: $data[apellidos] <br>
             Correo: $data[correo] <br>
             País: $data[pais] <br>
+            Departamento: $data[departamento] <br>
             Ciudad: $data[ciudad] <br>
             Número: $data[numero] <br>
+            Dispositivo: $data[dispositivo] <br>
             Mensaje: $data[mensaje]";
 //para el envío en formato HTML 
 $headers = "MIME-Version: 1.0\r\n";

@@ -5,9 +5,11 @@ function enviar() {
         apellidos: $('#inputLastName').val(),
         correo: $('#inputEmail').val(),
         pais: $('#select-pais').val(),
-        ciudad: $('#select-departamento').val(),
+        departamento: $('#select-departamento').val(),
+        ciudad: $('#select-ciudad').val(),
         numero: $('#inputcode1').val() + '' + $('#inputphone1').val(),
-        mensaje: $('#message').val()
+        mensaje: $('#message').val(),
+        dispositivo: document.querySelector("input[name='Radios']:checked").value=='option1'?'Teléfono':'Celular'
     }
     fetch('./php/sendMail.php', {
         method: 'POST',
@@ -23,7 +25,8 @@ function enviar() {
             $('#inputLastName').val('');
             $('#inputEmail').val('');
             $('#select-pais').val('');
-            $('#select-departamento').val('');
+            $('#select-departamento').val(),
+            $('#select-ciudad').val('');
             $('#inputcode1').val('');
             $('#inputphone1').val('');
             $('#message').val('');
@@ -33,15 +36,15 @@ function enviar() {
 
 var sizeNumber = null;
 function validate() {
-    // let code = $('#inputcode1').val();
-    // let number = $('#inputphone1').val();
-    // if (libphonenumber.parsePhoneNumber(code + '' + number).isValid()) {
-    //     enviar();
-    //     return false;
-    // } else {
-    //     alert("El número que ingresaste no es valido");
-    //     return false;
-    // }
+    let code = $('#inputcode1').val();
+    let number = $('#inputphone1').val();
+    if (number!='') {
+        enviar();
+        return false;
+    } else {
+        alert("El número que ingresaste no es valido");
+        return false;
+    }
 
 }
 
@@ -129,7 +132,7 @@ $(document).ready(function () {
             getCiudades(pais, departamento.text).then(arrCiudades => {
                 // console.log('getCiudades: ', arrCiudades);
                 let arrTmp = arrCiudades.map(ciudad => {
-                    return { id: ciudad.id, text: ciudad.name, codigo: ciudad.codtel }
+                    return { id: ciudad.name, text: ciudad.name, codigo: ciudad.codtel }
                 })
                 arrCiudades = arrTmp;
                 arrCiudades.unshift({ id: '0', text: 'Ciudad...', codigo: '', selected: true });

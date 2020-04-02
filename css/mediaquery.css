@@ -23,6 +23,13 @@
         max-height: 60px;
     }
     .sm-hide{
-        display: none;
+        display: none !important;
     }
+    .navbar-brand{
+        margin-right: 0;
+    }
+
+    /* .title{
+        margin-top: 17px;
+    } */
 }
