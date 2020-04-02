@@ -38,7 +38,7 @@ function formatoNumeros() {
     let inputTfln = $('#inputphone1');
     let inputCodigoTel = $('#inputcode1');
     if (pais) {
-        console.log('pais: : ', pais.short);
+        // console.log('pais: : ', pais.short);
         switch (pais.short) {
             case 'PE':
                 //codigo depa

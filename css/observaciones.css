@@ -1,60 +1,78 @@
-.check-cont>.form-check{
+.sks{
+    color: var(--edukt);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: -2px;
+    bottom: 2px;
+    font-size: 8px;
+    font-weight: 600;
+    font-style: italic;
+    
+}
+img.logo-fix {
+    /* padding-top: 6px; */
+    padding-bottom: 10px;
+    max-height: 45px !important;
+}
+.cardFeatures>div>span{
+    min-width: 70px;
+}
+.check-cont>.form-check {
     margin-right: 20px;
 }
-.imgcover{
-    /* position: absolute; */
+
+.imgcover {
     position: relative;
-    
     left: 0;
     top: 0;
     width: 106px;
     height: 100%;
-    /* background-color: dodgerblue; */
     height: 70px;
     opacity: 0.3;
-    /* display: none; */
-    /* background: #c6edff; background: -moz-linear-gradient(to right,  #c6edff 0%,#a3c6ff 100%); background: -webkit-linear-gradient(to right,  #c6edff 0%,#a3c6ff 100%); background: linear-gradient(to right,  #c6edff 0%,#a3c6ff 100%); */
-    backdrop-filter: saturate(30%) blur(1px) !important;
+    backdrop-filter: saturate(30%) blur(0px) !important;
     background-color: transparent !important;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-
 }
-section{
+
+section {
     position: relative;
 }
-.always-cont{
+
+.always-cont {
     position: absolute;
     left: 0;
     top: 20px;
 }
-.always-sks{
+
+.always-sks {
     max-height: 70px;
     position: absolute;
-    /* opacity: 0.8; */
-    
 }
 
-.font-vw{
+.font-vw {
     font-size: 1vw !important;
 }
-.single-profile-top>p{
+
+.single-profile-top>p {
     text-align: center;
     font-style: italic;
 }
+
 .single-profile-top {
     max-width: 1200px;
 }
-.cover:hover{
+
+.cover:hover {
     opacity: 100%;
 }
-.cover>i{
+
+.cover>i {
     color: rgb(5, 103, 202);
     font-size: 40px;
     cursor: pointer;
 }
-.cover{
+
+.cover {
     position: absolute;
     left: 0;
     top: 0;
@@ -65,24 +83,28 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
-.img-pdf-cont{
+
+.img-pdf-cont {
     position: relative;
 }
-.img-pdf{
+
+.img-pdf {
     background-color: dodgerblue;
 }
+
 .callToActions .contenido ul li {
-    font-size: 1vw;
+    font-size: inherit;
 }
-.center-section{
+
+.center-section {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.chrome{
+
+.chrome {
     text-align: center;
     font-style: italic;
     padding: 0;
@@ -90,114 +112,129 @@ section{
     color: #424242;
     font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
 }
-.new-testimonial-cont>h4,h5{
+
+.new-testimonial-cont>h4, h5 {
     text-align: center;
 }
+
 .carousel-item img {
     border-radius: 0;
 }
 
-.prezi{
+.prezi {
     width: auto !important;
 }
-ul.my-row>li{
+
+ul.my-row>li {
     list-style: none;
 }
-ul.my-row>li>img{
+
+ul.my-row>li>img {
     height: 35px !important;
-    width: 40px ;
+    width: 40px;
     padding-right: 7px;
 }
-nav.navbar{
+
+nav.navbar {
     padding: 0 !important;
-   } 
-a.irArriba{
-    text-shadow:
-    1px  1px 2px white,
-    1px -1px 2px white,
-   -1px  1px 2px white,
-   -1px -1px 2px white !important;
-   backdrop-filter: saturate(180%) blur(20px) !important;
-   background-color: rgba(255, 255, 255, .72) !important;
 }
 
-.nav-link:hover{
-border: none !important;
-color: rgb(165, 165, 165) !important;
+a.irArriba {
+    text-shadow: 1px 1px 2px white, 1px -1px 2px white, -1px 1px 2px white, -1px -1px 2px white !important;
+    backdrop-filter: saturate(180%) blur(20px) !important;
+    background-color: rgba(255, 255, 255, .72) !important;
 }
-footer.new-footer a{
+
+.nav-link:hover {
+    border: none !important;
+    color: rgb(165, 165, 165) !important;
+}
+
+footer.new-footer a {
     color: white !important;
 }
-footer.new-footer{
+
+footer.new-footer {
+    border-top: 3px solid rgb(2, 122, 242);
     min-height: 180px;
     height: auto !important;
     background-color: rgb(2, 94, 187) !important;
-color: white !important;
+    color: white !important;
 }
-.fix-font-size{
-    font-size: 1vw;
-}
-img.logo-fix{
-    max-height: 65px !important;
-}
-.slogan{
+
+
+
+
+.slogan {
     font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 25px;
     font-style: italic;
-    color:#000b52;
+    color: #000b52;
 }
-.y-center{
+
+.y-center {
     display: flex;
     align-items: center;
 }
-.boxSlider{
+
+.boxSlider {
     position: relative;
 }
-.texto-demo{
+
+.texto-demo {
     position: absolute;
     bottom: 30px;
 }
-.texto-demo>a{
+
+.texto-demo>a {
     font-weight: 600;
     font-size: 22px;
     font-style: italic;
     font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.boxHeader>div.fix-flex{
+.boxHeader>div.fix-flex {
     flex: initial !important;
 }
-.adaptate{
+
+.adaptate {
     font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 32px;
-    color: #f1ad42;    
+    color: #f1ad42;
 }
-.video{
+
+.video {
     max-height: 200px;
 }
-footer.footer{
+
+footer.footer {
     background-color: #f6f6f6;
     text-align: center;
-
 }
-.responsive-cont{
+
+.responsive-cont {
     margin-top: 20px;
 }
-.responsive-cont>div>p{
+
+.responsive-cont>div>p {
     color: black;
     font-size: 22px;
 }
-.pantallazo{
+
+.pantallazo {
     margin-top: 25px;
 }
-.pantallazo>div>img{
+
+.pantallazo>div>img {
     max-height: 200px;
     margin: auto;
 }
-img{
-    max-height: 270px ;
+
+img {
+    max-height: 270px;
     max-width: 100%;
 }
+
 .empresas {
     padding: 0;
     margin: 0;
@@ -206,25 +243,28 @@ img{
     position: relative;
     border-radius: 10px;
 }
-.no-mg{
+
+.no-mg {
     margin: 0 !important;
 }
-.my-font{
+
+.my-font {
     font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
     font-style: italic;
     font-size: 20px;
     color: #818181;
     font-weight: 700;
 }
-.title-empresas{
+
+.title-empresas {
     padding-left: 20px;
     font-style: italic;
     font-size: 20px;
     color: #818181;
     font-weight: 700;
     margin-top: 20px;
-
 }
+
 .blur {
     position: absolute;
     width: 100%;
@@ -266,7 +306,6 @@ div.boxCardCallToActions.boxCardAnimated {
     font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
 .obsButton2 {
     font-style: italic;
     color: rgb(70, 149, 228) !important;
@@ -304,7 +343,7 @@ div.boxCardCallToActions.boxCardAnimated {
 }
 
 .cardFeatures {
-    width: 32% ;
+    width: 32%;
 }
 
 .cardFeatures>div>span {
@@ -351,7 +390,8 @@ div.boxCardCallToActions.boxCardAnimated {
 .imgHeader {
     right: 0 !important;
 }
-.imgAbout{
+
+.imgAbout {
     background-image: url(https://smartknowledge-solutions.com/image/backgroundproducto.jpg);
     background-repeat: no-repeat;
     object-fit: fill;

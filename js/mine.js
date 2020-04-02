@@ -1,4 +1,4 @@
-var code; var number; var pais; var departamento={codigo:'',text:''}; var ciudad={codigo:'',text:''};
+var code; var number; var pais; var departamento = { codigo: '', text: '' }; var ciudad = { codigo: '', text: '' };
 function enviar() {
     let data = {
         nombre: $('#inputName').val(),
@@ -25,7 +25,7 @@ function enviar() {
             $('#select-pais').val('');
             $('#select-departamento').val('');
             $('#inputcode1').val('');
-             $('#inputphone1').val('');
+            $('#inputphone1').val('');
             $('#message').val('');
         })
     })
@@ -57,7 +57,7 @@ $(document).ready(function () {
             return { id: pais.text, text: pais.text, lista: pais.lista, code: pais.code, short: pais.short }
         })
         maped.unshift({ id: '0', code: "", text: "País...", short: "", lista: [] })
-        console.log(maped);
+        // console.log(maped);
         let arrDepartamentos = new Array;
         arrDepartamentos.unshift({ id: '0', text: 'Departamento...', codigo: '', selected: true });
         $('#select-departamento').select2({ data: arrDepartamentos });
@@ -74,7 +74,7 @@ $(document).ready(function () {
             console.log('Cambiaste de país! ', pais)
 
             getDepartamentos(pais.short).then(arrDepartamentos => {
-                console.log('get: ', arrDepartamentos)
+                // console.log('get: ', arrDepartamentos)
                 let arrTmp = arrDepartamentos.map(departamento => {
                     if (pais.short === 'PE') {
                         return { id: departamento.nombre, codigo: departamento.codteldep, text: departamento.nombre }
@@ -92,7 +92,7 @@ $(document).ready(function () {
                     // $('#inputphone1').mobilePhoneNumber({
                     //     defaultPrefix: pais.code
                     // });
-                    console.log('arrDepartamentos: ', arrDepartamentos);
+                    // console.log('arrDepartamentos: ', arrDepartamentos);
                     $('#select-departamento').select2({ data: arrDepartamentos });
                 }
                 // working
@@ -117,17 +117,17 @@ $(document).ready(function () {
 
     })
     $('#select-departamento').on("select2:select", (e) => {
-        departamento={codigo:'',text:''}; 
+        departamento = { codigo: '', text: '' };
         departamento = e.params.data;
         if (departamento.codigo != '') {
             // $('#inputcode1').val(pais.code + ' ' + departamento.codigo);
         }
         formatoNumeros()
         if (departamento.id != '0' && (pais.short === 'MEX' || pais.short === 'CHL' || pais.short === 'PAN' || pais.short === 'ARG')) {
-            
+
             $('#select-ciudad').empty();
             getCiudades(pais, departamento.text).then(arrCiudades => {
-                console.log('getCiudades: ', arrCiudades);
+                // console.log('getCiudades: ', arrCiudades);
                 let arrTmp = arrCiudades.map(ciudad => {
                     return { id: ciudad.id, text: ciudad.name, codigo: ciudad.codtel }
                 })
@@ -144,41 +144,12 @@ $(document).ready(function () {
 
     })
     $('#select-ciudad').on("select2:select", e => {
-        ciudad={codigo:'',text:''};
+        ciudad = { codigo: '', text: '' };
         ciudad = e.params.data;
         formatoNumeros();
         if (ciudad.codigo != '') {
             // $('#inputcode1').val(pais.code + ' ' + ciudad.codigo);
         }
     })
-}); 
+});
 
-
-// function phone(e) {
-//     console.log('key pressed');
-//     code = $('#inputcode1').val();
-//     if (code.substring(0, 1) == '+') {
-//         console.log('ok, codigo valido: ', code)
-//         let id = "#" + e.id;
-//         // console.log('es valido? ',$(id).mobilePhoneNumber('validate'));
-//         number = $(id).val();
-//         if (libphonenumber.parsePhoneNumber(code + '' + number).isValid()) {//NUMERO COMPLETO Y VALIDO
-//             number = libphonenumber.parsePhoneNumber(code + '' + number).formatNational();
-//             $(id).prop('maxlength', number.length);
-//             sizeNumber = number.length;
-//             $(id).val(number);
-//             console.log('es valido')
-//         }
-//         if (sizeNumber != null) {
-//             // let tmpNumber = $(id).val();
-//             // console.log('formated ',libphonenumber.parsePhoneNumber(code + '' + number).formatNational());
-//             // console.log('number: ', tmpNumber.length, 'size: ', sizeNumber)
-//             // if (tmpNumber.length+1 >sizeNumber) {
-//             //     $(id).val(tmpNumber.substring(0, sizeNumber));
-//             // } else {
-
-//             // }
-//         }
-//     }
-
-// }
