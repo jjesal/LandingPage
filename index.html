@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="Oscar Cornejo">
     <meta name="description" content="Landing Page">
     <title>EduktMaestro</title>
 
@@ -41,7 +40,7 @@
                 <span class="edukt">Edukt</span> <span class="maestro">Maestro</span>
             </a>
             <a class="navbar-brand center-row" href="#linkHome">
-                <img class="logo-fix" src="https://smartknowledge-solutions.com/image/logo.png" alt="">
+                <img class="logo-fix" src="./images/Logo-y-slogan-sks.png" alt="">
                 <!-- <span class="edukt">Edukt</span> <span class="maestro">Maestro</span> -->
             </a>
             <a class="navbar-brand center-row" href="#linkHome">
@@ -77,6 +76,10 @@
             </div>
         </nav>
         <section id="linkHome" class="fixBox">
+            <div class="always-cont">
+                <img class="always-sks" src="./images/Logo-y-slogan-sks.png" alt="">
+                <div class="imgcover"></div>
+            </div>
             <div class="boxLogo">
                 <h1 class="title"><span class="edukt">Edukt</span><span class="maestro">Maestro</span></h1>
             </div>
@@ -158,11 +161,43 @@
                                             id="select-pais"></select>
                                     </div>
                                     <div class="form-group col-md-6">
+                                        <label for="inputLastName"><b>Departamento</b></label>
+                                        <select name="Departamento" required class="form-control"
+                                            placeholder="Departamento" id="select-departamento">
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-12 center-row check-cont">
+                                        <div class="form-check" style="display:inline-block;">
+                                            <input onchange="formatoNumeros(this)" class="form-check-input radiotelefono" type="radio" name="Radios"
+                                                id="Radios1" value="option1">
+                                            <label class="form-check-label" for="Radios1">
+                                                Teléfono
+                                            </label>
+                                        </div>
+                                        <div class="form-check" style="display:inline-block;">
+                                            <input checked="checked" onchange="formatoNumeros(this)" class="form-check-input radiotelefono" type="radio" name="Radios"
+                                                id="Radios2" value="option2">
+                                            <label class="form-check-label" for="Radios2">
+                                                Celular
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div id="ciudad-cont" class="form-row">
+                                    <div class="form-group col-md-12">
+                                        <label for="inputName"><b>Ciudad</b></label>
+                                        <select name="ciudad" class="form-control" placeholder="Ciudad"
+                                            id="select-ciudad"></select>
+                                    </div>
+                                    <!-- <div class="form-group col-md-6">
                                         <label for="inputLastName"><b>Ciudad</b></label>
                                         <select name="Ciudad" required class="form-control" placeholder="Ciudad"
                                             id="select-ciudad">
                                         </select>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
@@ -172,8 +207,7 @@
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputLastName"><b>Celular</b></label>
-                                        <input type="text" pattern="[0-9 ]+" onkeypress="phone(this)"
-                                            onchange="phone(this)" class="form-control" id="inputphone1"
+                                        <input type="text" class="form-control" id="inputphone1"
                                             placeholder="Celular..." required>
                                     </div>
                                 </div>
@@ -214,6 +248,10 @@
         <a id="subir" class="scroll obsButton2" href="#linkContacto">Contactar</a>
         <!-- Sección Features -->
         <section class="boxFeatures fixBox" id="linkFeatures">
+            <div class="always-cont">
+                <img class="always-sks" src="./images/Logo-y-slogan-sks.png" alt="">
+                <div class="imgcover"></div>
+            </div>
             <h3 class="title">Principales Características</h3>
 
             <div class="features">
@@ -325,7 +363,11 @@
         <!-- Fin Sección Features -->
 
         <!-- Sección Call To Actions -->
-        <section id="callToActions" class="boxCallToActions fixBox">
+        <section id="callToActions" class="boxCallToActions fixBox center-section">
+            <div class="always-cont">
+                <img class="always-sks" src="./images/Logo-y-slogan-sks.png" alt="">
+                <div class="imgcover"></div>
+            </div>
             <div class="row">
                 <div class="callToActions">
                     <div class="col-md-6 col-sm-12">
@@ -337,7 +379,7 @@
                         <article class="contenido ">
                             <h3 class="title">¿Cómo funciona?</h3>
 
-                            <ul>
+                            <ul class="font-vw">
                                 <li> <span class="icon-check"></span> Docentes: Uso y manejo de la plataforma, creación
                                     de
                                     cursos, construcción de evaluaciones y
@@ -379,6 +421,9 @@
                         <div class="col-md-6">
                             <img src="./images/responsive-mine.png" alt="" srcset="">
                         </div>
+                        <div class="col-sm-12">
+                            <p class="chrome">* Para una mejor experiencia, recomendamos el navegador Chrome</p>
+                        </div>
                     </div>
 
                 </div>
@@ -388,7 +433,10 @@
 
         <!-- Sección About -->
         <section class="boxAbout fixBox" id="linkAbout">
-
+            <div class="always-cont">
+                <img class="always-sks" src="./images/Logo-y-slogan-sks.png" alt="">
+                <div class="imgcover"></div>
+            </div>
             <h3 class="title">Sobre Nosotros</h3>
 
             <div class="about">
@@ -427,6 +475,10 @@
 
         <!-- Sección Testimonios -->
         <section class="boxSlider center fixBox" id="linkTestimonial">
+            <div class="always-cont">
+                <img class="always-sks" src="./images/Logo-y-slogan-sks.png" alt="">
+                <div class="imgcover"></div>
+            </div>
             <div class="row">
                 <h3 class="title">Testimonios</h3>
             </div>
@@ -517,21 +569,69 @@
                         </div>
 
                         <div class="carousel-item">
-                            <img class="d-block mx-auto" src="./images/pp3.png" alt="">
-                            <p class="text-center sliderText">Es muy didáctico, me gusta mucho la parte de curso de
-                                ejemplificación en el cual voy ingresando los valores como si un profesor estuviera
-                                conmigo,
-                                es la primera vez que interactúo con una opción así, eso lo hace diferente a otras
-                                capacitaciones virtuales.
-                                La plataforma es buena y se entiende, además de toda la información que se brinda.</p>
-                            <p class="text-center"><b>Jorge Luis</b></p>
+                            <div class="col-md-12 ">
+                                <div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms"
+                                    data-wow-delay="300ms"
+                                    style="visibility: visible; animation-duration: 1000ms; animation-delay: 300ms; animation-name: fadeInDown;">
+                                    <div class="media center">
+                                        <div class="">
+                                            <a href="#"><img class="media-object" src="images/nn.jpg?804089" width="150"
+                                                    height="200" alt=""></a>
+                                        </div>
+                                        <div class="new-testimonial-cont">
+                                            <h4>COBEÑAS AMAYA CESAR RICARDO</h4>
+                                            <h5>PIURA</h5>
+                                            <ul class="my-row center">
+                                                <li><img src="https://eduktvirtual.com/peru.png"></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!--/.media -->
+                                    <p>
+                                        Felicitarles y decirles que el curso y la metodología son muy interesantes y
+                                        divertidas hace que uno se interese mas en el curso.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- <img class="d-block mx-auto" src="./images/pp2.png" alt="">
+                            <p class="text-center sliderText">Yo ya terminé Word básico, intermedio ya avanzado, ahora
+                                me
+                                encuentro en PowerPoint básico.
+                                Están muy buenos los cursos. Solo que requiere concentración y mucho empeño.</p>
+                            <p class="text-center"><b>Alcides</b></p> -->
                         </div>
 
                         <div class="carousel-item">
-                            <video class="video" controls>
-                                <source src="http://www.learn.eduktvirtual.com/filealumno/26042018080511.mp4"
-                                    type="video/mp4">
-                            </video>
+                            <div class="col-md-12 ">
+                                <div class="single-profile-top wow fadeInDown center" data-wow-duration="1000ms"
+                                    data-wow-delay="300ms"
+                                    style="visibility: visible; animation-duration: 1000ms; animation-delay: 300ms; animation-name: fadeInDown;">
+                                    <div class="media center">
+                                        <div class="">
+                                            <a href="#"><img class="media-object" src="images/nn.jpg?804089" width="150"
+                                                    height="200" alt=""></a>
+                                        </div>
+                                        <div class="new-testimonial-cont">
+                                            <h4>Erika Paola Castillo Beltrán</h4>
+                                            <ul class="my-row center">
+                                                <li><img src="https://eduktvirtual.com/colombia.png"></li>
+                                                <li><img src="https://eduktvirtual.com/images/cursos/iconos/0043.png">
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="img-pdf-cont">
+                                        <img class="img-pdf"
+                                            src="https://eduktvirtual.com/nuestrosclientes/archivos/minicartaerika.png"
+                                            alt="">
+                                        <div class="cover">
+                                            <i data-toggle="modal" data-target="#exampleModal" class="fa fa-eye"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -540,7 +640,6 @@
                 </div>
             </div>
             <div class="row texto-demo">
-
                 <a href="#linkContacto">Contactar para una demostración</a>
             </div>
         </section>
@@ -552,6 +651,29 @@
         <!-- Sección Contacto -->
 
     </main>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Carta Testimonio</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://eduktvirtual.com/nuestrosclientes/archivos/CARTAErika.pdf" width="100%"
+                        height="500px">
+                    </iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Fin Contenedor Main -->
     <!-- <a class="botonGetStarted obsButton" onclick="scroll_to('linkContacto')" href="#linkContacto">Contactar</a> -->
     <!-- Contenedor Footer -->
@@ -564,41 +686,6 @@
                     <p class="margin-zero font-medium">All Rights Reserved</p>
                 </div>
                 <div class="col-lg-5 col-md-5 col-sm-5">
-                    <ul class="nav row">
-                        <li class="nav-item col-sm-4">
-                            <a class="nav-link" href="#linkHome">Inicio</a>
-                        </li>
-                        <li class="nav-item col-sm-4">
-                            <a class="nav-link" href="#linkAbout">Nosotros</a>
-                        </li>
-                        <li class="nav-item col-sm-4">
-                            <a class="nav-link" target="_blank"
-                                href="https://smartknowledge-solutions.com/es/productos.php">Productos</a>
-                        </li>
-                        <li class="nav-item col-sm-4">
-                            <a class="nav-link" target="_blank"
-                                href="https://smartknowledge-solutions.com/es/distribuidores.php">Representantes</a>
-                        </li>
-                        <li class="nav-item col-sm-4">
-                            <a class="nav-link" target="_blank"
-                                href="https://smartknowledge-solutions.com/es/soporte.php">Soporte</a>
-                        </li>
-                        <li class="nav-item col-sm-4">
-                            <a class="nav-link" href="#linkContacto">Contáctanos</a>
-                        </li>
-                        <li class="nav-item col-sm-4">
-                            <a class="nav-link" target="_blank"
-                                href="https://smartknowledge-solutions.com/es/politicas.php">Nuestras politicas de
-                                privacidad</a>
-                        </li>
-                        <li class="nav-item col-sm-4">
-                            <a class="nav-link" target="_blank"
-                                href="https://smartknowledge-solutions.com/es/politicas-cookies.php">Nuestras politicas
-                                de cookies</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4">
                     <h5 class="font-family-medium">Contactos:</h5>
                     <ul class="list-group" style="padding:0; list-style: none">
                         <li class=""><span style="font-size: medium; text-shadow: 1px 1px 4px black; color: #f1f1f1;"><i
@@ -607,6 +694,13 @@
                                     class="fa fa-phone"></i></span> +51 1-436-6713</li>
                         <li class=""><span style="font-size: medium; text-shadow: 1px 1px 4px black; color: #f1f1f1;"><i
                                     class="fa fa-phone"></i></span> Se habla español : 954-678-6669</li>
+
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+
+                    <ul class="list-group" style="padding:0; list-style: none">
+
                         <li class=""><span style="font-size: medium; text-shadow: 1px 1px 4px black; color: #f1f1f1;"><i
                                     class="fa fa-whatsapp"></i></span> +51-989 032 416</li>
                         <li class=""><span style="font-size: medium; text-shadow: 1px 1px 4px black; color: #f1f1f1;"><i
@@ -634,7 +728,7 @@
     </footer>
     <!-- Fin Contenedor Footer -->
 
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
@@ -647,123 +741,18 @@
     <script src="libs/scrollSections/jquery.scrollSections-0.4.3.min.js"></script>
     <script src="js/dataApi.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/mine.js"></script>
+    <script src="js/api.js"></script>
     <script>
-        function enviar() {
-            let data = {
-                nombre: $('#inputName').val(),
-                apellidos: $('#inputLastName').val(),
-                correo: $('#inputEmail').val(),
-                pais: $('#select-pais').val(),
-                ciudad: $('#select-ciudad').val(),
-                numero: $('#inputcode1').val() + '' + $('#inputphone1').val(),
-                mensaje: $('#message').val()
-            }
-            fetch('./php/sendMail.php', {
-                method: 'POST',
-                body: JSON.stringify(data)
-            }).then(rpt => {
-                Swal.fire({
-                    title: 'Enviado',
-                    text: "En seguida nos pondremos en contacto contigo!",
-                    icon: 'success',
 
-                }).then((result) => {
-                    $('#inputName').val('');
-                    $('#inputLastName').val('');
-                    $('#inputEmail').val('');
-                    $('#select-pais').val('');
-                    $('#select-ciudad').val('');
-                    $('#inputcode1').val('') + '' + $('#inputphone1').val('');
-                    $('#message').val('');
-                })
-            })
-        }
-
-        var sizeNumber = null;
-        function validate() {
-            let code = $('#inputcode1').val();
-            let number = $('#inputphone1').val();
-            if (libphonenumber.parsePhoneNumber(code + '' + number).isValid()) {
-                enviar();
-                return false;
-            } else {
-                alert("El número que ingresaste no es valido");
-                return false;
-            }
-
-        }
-        var code; var number;
-        function phone(e) {
-            console.log('key pressed');
-            code = $('#inputcode1').val();
-            if (code.substring(0, 1) == '+') {
-                console.log('ok, codigo valido: ', code)
-                let id = "#" + e.id;
-                // console.log('es valido? ',$(id).mobilePhoneNumber('validate'));
-                number = $(id).val();
-                if (libphonenumber.parsePhoneNumber(code + '' + number).isValid()) {//NUMERO COMPLETO Y VALIDO
-                    number = libphonenumber.parsePhoneNumber(code + '' + number).formatNational();
-                    $(id).prop('maxlength', number.length);
-                    sizeNumber = number.length;
-                    $(id).val(number);
-                    console.log('es valido')
-                }
-                if (sizeNumber != null) {
-                    // let tmpNumber = $(id).val();
-                    // console.log('formated ',libphonenumber.parsePhoneNumber(code + '' + number).formatNational());
-                    // console.log('number: ', tmpNumber.length, 'size: ', sizeNumber)
-                    // if (tmpNumber.length+1 >sizeNumber) {
-                    //     $(id).val(tmpNumber.substring(0, sizeNumber));
-                    // } else {
-
-                    // }
-                }
-            }
-
-        }
-        $(document).ready(function () {
-            fetch('./json/countries.json', {
-                method: 'GET',
-            }).then(rsp => {
-                return rsp.json();
-            }).then(paises => {
-                let maped = paises.map(pais => {
-                    return { id: pais.text, text: pais.text, lista: pais.lista, code: pais.code }
-                })
-                console.log(maped);
-                $('#select-ciudad').select2({ data: maped[0].lista });
-                $('#select-pais').select2({ data: maped });
-
-
-            })
-            $('#select-pais').on("select2:select", (e) => {
-                $('#select-ciudad').empty();
-                var data = e.params.data;
-                if (data.code != "") {
-                    $('#inputcode1').val(data.code);
-                    goodPhone = '';
-                    $('#inputphone1').val('');
-                    $('#inputphone1').mobilePhoneNumber({
-                        defaultPrefix: data.code
-                    });
-                    let depas = data.lista.map(depa => {
-                        return { id: depa, text: depa }
-                    })
-                    $('#select-ciudad').select2({ data: depas });
-                }
-
-            })
-        });
         // Detect all clicks on the document
         document.addEventListener('click', function (event) {
-            console.log('event.target.id: ', event.target.querySelector('#scrollsections-navigation'));
             if (event.target.querySelector('#scrollsections-navigation') == null) {
                 $('#navbarSupportedContent').collapse('hide')
             }
 
         }, false);
         if ($(window).width() <= 576) {
-            console.log('resize')
             window.destroy = true;
         }
 

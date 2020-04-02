@@ -1,25 +1,25 @@
 // AGREGA CLASE boxCardAnimated AL HACER SCROLL PARA ANIMAR COMPONENTE CARD 
-window.onscroll = function () {
+// window.onscroll = function () {
 
-    let scrollPosY = window.pageYOffset | document.body.scrollTop;
+//     let scrollPosY = window.pageYOffset | document.body.scrollTop;
 
-    if (scrollPosY >= 400) {
-        subir = document.querySelector('#subir');
-        subir.classList.add("irArriba");
-    } else {
-        subir = document.querySelector('#subir');
-        subir.classList.remove("irArriba");
-    }
+//     if (scrollPosY >= 400) {
+//         subir = document.querySelector('#subir');
+//         subir.classList.add("irArriba");
+//     } else {
+//         subir = document.querySelector('#subir');
+//         subir.classList.remove("irArriba");
+//     }
 
-    if (scrollPosY >= 910) {
-        cardAnimated = document.getElementById('cardAnimada');
-        cardAnimated.classList.add("boxCardAnimated");
-    } else {
-        cardAnimated = document.getElementById('cardAnimada');
-        cardAnimated.classList.remove("boxCardAnimated");
-    }
+//     if (scrollPosY >= 910) {
+//         cardAnimated = document.getElementById('cardAnimada');
+//         cardAnimated.classList.add("boxCardAnimated");
+//     } else {
+//         cardAnimated = document.getElementById('cardAnimada');
+//         cardAnimated.classList.remove("boxCardAnimated");
+//     }
 
-};
+// };
 
 
 // AGREGA CLASE current AL HACER SCROLL 
