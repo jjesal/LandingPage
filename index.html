@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Landing Page">
-    <title>EduktMaestro</title>
+    <title>SmartKnowledgeSolutions E-Learning</title>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -28,6 +28,11 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
     <link rel="icon" type="image/png" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="css/mediaquery.css">
+    <style type="text/css">
+        #navFixed { border-bottom:  2.5px solid #6d98239e; }
+        #linkHome { background:url(images/testbackground.jpg); background-repeat: no-repeat; background-size: cover; background-position-x: -100px; }
+        .boxContacto { background-color: transparent; }
+    </style>
 </head>
 
 <body>
@@ -35,68 +40,68 @@
     <!-- Contenedor Header -->
     <header>
         <nav id="navFixed" class="navbar fixed-top navbar-expand-lg navbar-light bg-light p-10px">
-            <a class="navbar-brand center-row" href="#linkHome">
-                <img src="./images/my-logoEdukt.png" alt="">
-                <span class="edukt">Edukt</span> <span class="maestro">Maestro</span>
-            </a>
-            <a class="navbar-brand center-row" style="position: relative;" href="#linkHome">
-                <img class="logo-fix" src="./images/Logo-y-slogan-sks.png" alt="">
-                <!-- <span class="sks">SKS</span>  -->
-            </a>
-            <a class="navbar-brand center-row" href="#linkHome">
-                <img src="https://eduktvirtual.com/logo_edukt2.png" alt="">
-                <!-- <span class="edukt">Edukt</span> <span class="maestro">Maestro</span> -->
-            </a>
-            <a class="navbar-brand center-row sm-hide" href="#linkHome">
-                <img src="https://www.eduktvirtual.com/images/logoabaco.png" alt="">
-                <!-- <span class="edukt">Edukt</span> <span class="maestro">Maestro</span> -->
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="container">
+                <a class="navbar-brand center-row" style="position: relative;" href="#linkHome">
+                    <img class="logo-fix" src="./images/Logo-y-slogan-sks.png" alt="">
+                    <!-- <span class="sks">SmartKnowledgeSolutions</span>  -->
+                </a>
+                <a class="navbar-brand center-row" href="#linkHome">
+                    <img src="https://eduktvirtual.com/logo_edukt2.png" alt="">
+                    <!-- <span class="edukt">Edukt</span> <span class="maestro">Maestro</span> -->
+                </a>
+                <a class="navbar-brand center-row sm-hide" href="#linkHome">
+                    <img src="https://www.eduktvirtual.com/images/logoabaco.png" alt="">
+                    <!-- <span class="edukt">Edukt</span> <span class="maestro">Maestro</span> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul id="scrollsections-navigation" class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link scroll current" onclick="scroll_to('linkHome')" href="#linkHome">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link scroll" onclick="scroll_to('linkFeatures')"
-                            href="#linkFeatures">Características</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link scroll" onclick="scroll_to('linkAbout')" href="#linkAbout">Sobre nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link scroll" onclick="scroll_to('linkTestimonial')"
-                            href="#linkTestimonial">Testimonios</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link scroll" onclick="scroll_to('linkContacto')" href="#linkContacto">Contacto</a>
-                    </li> -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="scrollsections-navigation" class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link scroll current" onclick="scroll_to('linkHome')" href="#linkHome">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll" onclick="scroll_to('linkFeatures')"
+                                href="#linkFeatures">Características</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll" onclick="scroll_to('linkAbout')" href="#linkAbout">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll" onclick="scroll_to('linkTestimonial')"
+                                href="#linkTestimonial">Testimonios</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link scroll" onclick="scroll_to('linkContacto')" href="#linkContacto">Contacto</a>
+                        </li> -->
 
-                </ul>
+                    </ul>
+                </div>
+                
             </div>
         </nav>
         <section id="linkHome" class="fixBox">
 
-            <div class="boxLogo">
+            <!-- <div class="boxLogo">
                 <h1 class="title"><span class="edukt">Edukt</span><span class="maestro">Maestro</span></h1>
-            </div>
+            </div> -->
             <div class="row no-mg">
                 <div class="col-md-12 col-lg-8">
                     <div class="row">
                         <div class="col-md-6"></div>
-                        <div class="col-md-6 center text-center">
-                            <span class="slogan">"Somos un instrumento para la equidad fuera del aula presencial"</span>
-                        </div>
+                        <!-- <div class="col-md-6 center text-center">
+                            <img src="images/avisobecas.png" />
+                            <span class="slogan">Mil becas disponibles</span>
+                        </div> -->
                     </div>
                     <div class="row">
                         <div class="boxHeader row">
                             <div class="col-sm-12 col-md-7">
                                 <div class="textosHeader">
-                                    <h1><b> Enseñanza Virtual</b></h1>
+                                    <!-- <h1><b> Enseñanza Virtual</b></h1>
                                     <p>Una plataforma virtual para el aprendizaje, orientado a facilitar la experiencia
                                         de
                                         ENSEÑANZA Y APRENDIZAJE a distancia, usando diferentes recursos multimedia,
@@ -104,19 +109,25 @@
                                     </p>
                                     <a class="botonGetStarted" onclick="scroll_to('linkFeatures')" href="#"
                                         rel="nofollow noopener">Saber
-                                        más</a>
+                                        más</a> -->
                                 </div>
                             </div>
                             <div class="col-sm-12 col-md-5 fix-flex">
                                 <div class="imgHeader">
 
                                     <div class="row">
-                                        <div class="col-sm-12"><img src="images/landing_1.png" alt=""></div>
+                                        <!-- <div class="col-sm-12"><img src="images/landing_1.png" alt=""></div> -->
                                         <div class="col-sm-12">
-                                            <p class="boxCardAnimated adaptate "><i>Adáptate,</i>
+                                            <img src="images/avisobecas.png" style="max-width: 300px;" />
+                                            <p class="slogan"><span style="background: #6d90b587; color: white; font-size: 1.5em; font-weight: bold;">Mil becas disponibles</span></p>
+                                            <p style="font-size: 1.3em; color: black; font-weight: bold;">Fortalece tus conocimiento con nuestros cursos online</p>
+                                            <!-- <p class="boxCardAnimated adaptate "><i>Adáptate,</i>
                                                 <br>
                                                 Únete al cambio mundial
-                                            </p>
+                                            </p> -->
+                                            <div class="text-center">
+                                                <a class="botonGetStarted" onclick="scroll_to('linkFeatures')" href="#" rel="nofollow noopener">Saber más</a>
+                                            </div>
                                         </div>
 
                                     </div>
@@ -132,7 +143,7 @@
                 <div class="col-md-12 col-lg-4">
                     <!-- Sección Contacto -->
                     <section class="boxContacto fixBox oneFix obsContacto" id="linkContacto">
-                        <h3 class="title">Contáctanos</h3>
+                        <h3 class="title">Reg&iacute;strate Aqu&iacute;</h3>
 
                         <div class="container contacto">
                             <form id="miForm" onsubmit="return validate()">
@@ -214,20 +225,30 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="message"><b>Mensaje</b></label>
-                                    <textarea class="form-control" rows="3" id="message"
-                                        placeholder="Déjanos tus dudas..." required></textarea>
+                                    <label for="message"><b>Elija el curso de su preferencia</b></label>
+                                    <select class="form-control" id="select-cursos" placeholder="Curso" required>
+                                        <option value="0">Curso..</option>
+                                        <option value="1" data-codigo="0114">Excel Básico 2016</option>
+                                        <option value="2" data-codigo="0115">Excel Intermedio 2016</option>
+                                        <option value="3" data-codigo="0116">Excel Avanzado 2016</option>
+                                        <option value="4" data-codigo="0117">Word Básico 2016</option>
+                                        <option value="5" data-codigo="0118">Word Intermedio 2016</option>
+                                        <option value="6" data-codigo="0121">Word Avanzado 2016</option>
+                                        <option value="7" data-codigo="0119">PowerPoint Básico 2016</option>
+                                        <option value="8" data-codigo="0120">PowerPoint Intermedio 2016</option>
+                                        <option value="9" data-codigo="0122">PowerPoint Avanzado 2016</option>
+                                    </select>
                                 </div>
 
 
-                                <button type="submit" class="botonEnviarMensaje">Quiero más Información</button>
+                                <button type="submit" class="botonEnviarMensaje">Registrar</button>
                             </form>
                         </div>
                     </section>
                     <!-- Sección Contacto -->
                 </div>
                 <div class="col-md-12">
-                    <div class="row my-font title-empresas">Casos de éxitos:</div>
+                    <!-- <div class="row my-font title-empresas">Casos de éxitos:</div> -->
                     <div class="row my-row empresas">
                         <img src="./images/empresas/Emp6.jpg" alt="">
                         <img src="./images/empresas/LOGO-LOC.png" alt="">
@@ -664,6 +685,92 @@
         </div>
     </div>
     <!-- Fin Contenedor Main -->
+    <!-- START MODAL REFERIDOS -->
+    <div class="modal fade" id="referidoModal" tabindex="-1" role="dialog" aria-labelledby="referidoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="referidoModalLabel">Carta Testimonio</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="alert alert-primary">Se requiere que nos ingrese a un referido de tu elección para optar por la beca solicitada, por favor ingrese los datos a continuación</p>
+                    <div class="form-row">
+                        <div class="form-group col-sm-6">
+                            <label>Nombres</label>
+                            <input type="text" class="form-control data-required" name="nameref" id="nameref" placeholder="Nombres..." />
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label>Apellidos</label>
+                            <input type="text" name="aperef" class="form-control data-required" id="aperef" placeholder="Apellidos..." />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" name="emailref" id="emailref" placeholder="email...">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6" data-select2-id="16">
+                            <label for="inputName"><b>País</b></label>
+                            <select name="select-paisref" class="form-control data-required" placeholder="País" id="select-paisref">
+                                <option value="0">País...</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6" data-select2-id="32">
+                            <label for="inputLastName"><b>Departamento</b></label>
+                            <select name="select-departamentoref" class="form-control data-required" placeholder="Departamento" id="select-departamentoref">
+                                <option value="0">Departamento...</option>
+                            </select>
+                        </div>
+                    </div>
+                     <div id="ciudad-contref" class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="inputName"><b>Ciudad</b></label>
+                            <select name="ciudadref" class="form-control" placeholder="Ciudad"
+                                id="select-ciudadref"></select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12 center-row check-cont">
+                            <div class="form-check" style="display:inline-block;">
+                                <input onchange="formatoNumeros(this)" class="form-check-input radiotelefono" type="radio" name="Radiosref" id="Radios1ref" value="option1ref">
+                                <label class="form-check-label" for="Radios1ref">
+                                    Teléfono
+                                </label>
+                            </div>
+                            <div class="form-check" style="display:inline-block;">
+                                <input checked="checked" onchange="formatoNumeros(this)" class="form-check-input radiotelefono" type="radio" name="Radiosref" id="Radios2ref" value="option2ref">
+                                <label class="form-check-label" for="Radios2ref">
+                                    Celular
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputcode"><b>Código</b></label>
+                            <input type="text" disabled class="form-control" id="inputcode1ref"
+                                placeholder="Código...">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputLastName"><b>Celular</b></label>
+                            <input type="text" class="form-control" id="inputphone1ref"
+                                placeholder="Celular...">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button> -->
+                    <button type="button" id="on-matricular" class="btn btn-primary">Registrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END MODAL REFERIDOS -->
     <!-- <a class="botonGetStarted obsButton" onclick="scroll_to('linkContacto')" href="#linkContacto">Contactar</a> -->
     <!-- Contenedor Footer -->
     <footer class="footer  new-footer">
