@@ -1,8 +1,10 @@
 const MAXBECAS = 1;
 const URL_WEBSERVICE = "https://localhost/smartknowledgesolution/php/api.php";
 const URL_WEBSERVICE_EDUKT = "https://eduktvirtual.com/landingpage/formlandingpage.php";
-var code; var number; var pais; var departamento = { codigo: '', text: '' }; var ciudad = { codigo: '', text: '' };
+var code; var number; var pais; var departamento = { codigo: '', text: '' }; var ciudad = { codigo: '', text: '' }; var empresa = null;
+var codempresa ='LIMA0000001';
 var sizeNumber = null;
+var arrimgE = null, arrimgW = null, arrimgP = null;
 
 function enviar() {
     let data = {
@@ -144,7 +146,7 @@ function procesarMatricula(){
         break;
     }
     datos = {
-        m: 'matricular_edutkvirtual',
+        sw: 'matricular_edutkvirtual',
         nombres: $('#inputName').val(),
         apellidos: $('#inputLastName').val(),
         email: $('#inputEmail').val(),
@@ -190,11 +192,102 @@ function validate() {
 
 }
 
+/*
+Buscar los cursos y precios
+*/
+function buscarcursos(_cursos,tab,arrimg){
+    let datos = {
+        sw: 'buscarcursos',
+        idcurso: _cursos
+    }
+    let contenedor = $(tab).find('.row');
+    let cambiodolar = empresa.idempresa == 'LIMA0000001' ? parseFloat(empresa.dolar) : 1;
+    let _signo = empresa.idempresa == 'LIMA0000001' ? 'PEN' : 'USD';;
+    $.post(URL_WEBSERVICE_EDUKT, datos, function(data, textStatus, xhr) {
+        contenedor.html('');
+        if(data.code == 'ok'){
+            if(Object.keys(data.data).length > 0){
+                for(let valor of data.data){
+                    let _img = $('input[codigo='+valor.idcurso+']').val();
+                    let _costoreal = (parseFloat(valor.costo) * cambiodolar).toFixed(2);
+                    contenedor.append(`
+                        <div class="col col-sm-4">
+                            <div class="card" style="max-width: 18rem;">
+                              <div class="img-card-curso"><img class="card-img-top" src="${_img}" alt="${valor.nombre}"></div>
+                              <div class="card-body">
+                                <h5 class="card-title">${valor.nombre}</h5>
+                                <p>
+                                    <span class="valor-actual">GRATIS</span> <span class="valor-anterior">${_signo} ${_costoreal}</span>
+                                </p>
+                                <a href="#linkContacto" data-cod="${valor.idcurso}" class="btn btn-primary on-inscribir">Inscribirse</a>
+                              </div>
+                            </div>
+                        </div>
+                    `);
+                }//end for
+            }
+        }else{
+            console.error(data.message);
+        }
+    },'json');
+}
+function buscarempresa(){
+    //codempresa
+    let datos = {
+        sw: 'buscarempresa',
+        idempresa: codempresa
+    }
+    $.post(URL_WEBSERVICE_EDUKT, datos, function(data, textStatus, xhr) {
+        if(data.code == 'ok'){
+            if(Object.keys(data.data).length > 0){
+                empresa = data.data[0];
+                
+                buscarcursos(['0114','0115','0116','0117','0118','0121','0119','0120','0122'],'#v-pills-all');
+                buscarcursos(['0114','0115','0116'],'#v-pills-home'); //excel
+                buscarcursos(['0117','0118','0121'],'#v-pills-profile'); //word
+                buscarcursos(['0119','0120','0122'],'#v-pills-messages'); //powerpoint
+            }
+        }else{
+            console.error(data.message);
+        }
+    },'json');
+}
 
 $(document).ready(function () {
     $('#ciudad-cont').hide();
     $('#select-cursos').select2();
+    $.getJSON('http://ip-api.com/json?callback=?', function(data) {
+        // console.log(JSON.stringify(data, null, 2));
+        switch(data.countryCode){
+            case 'AR': codempresa = 'ARGENTINA01';
+            break;
+            case 'BO': codempresa = 'BOLIVIA0001';
+            break;
+            case 'CL': codempresa = 'CHILE000001';
+            break;
+            case 'CO': codempresa = 'COLOMBIA001';
+            break;
+            case 'CR': codempresa = 'COSTARICA01';
+            break;
+            case 'EC': codempresa = 'ECUADOR0001';
+            break;
+            case 'MX': codempresa = 'MEXICO00001';
+            break;
+            case 'PE': codempresa = 'LIMA0000001';
+            break;
+        }
+        buscarempresa(); //inicializar cursos y empresa
+    });
+    // La api de cors-anywhere espera como argument la URL de destino
+    // var CorsAnyWhereUrl = 'https://cors-anywhere.herokuapp.com/';
 
+    // La URL de geoplugin que espera la IP de usuario
+    // var GeoPluginUrl =  "http://www.geoplugin.net/json.gp?ip=";
+    // $.getJSON(CorsAnyWhereUrl + GeoPluginUrl + ip,function(response){
+    //     console.log(response);
+    //     // Hola visitante de "Pais"
+    //     alert("Hola visitante de "+ response.geoplugin_countryName);
+    // });
     fetch('./json/countries.json', {
         method: 'GET',
     }).then(rsp => {
@@ -226,6 +319,12 @@ $(document).ready(function () {
             $('#referidoModal').modal('hide');
             procesarMatricula();
         }
+    });
+    $('body').on('click','.on-inscribir',function(){
+        let _cod = $(this).data('cod');
+        $('#select-cursos').find('option[data-codigo='+_cod+']').prop('selected',true);
+        $('#select-cursos').trigger('change');
+        // $('#select-cursos').find('option[data-codigo='+_cod+']').attr('selected',true);
     });
     $('#select-pais').on("select2:select", (e) => {
         clearCodes();

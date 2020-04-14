@@ -29,9 +29,30 @@
     <link rel="icon" type="image/png" href="./images/favicon-32x32.png">
     <link rel="stylesheet" href="css/mediaquery.css">
     <style type="text/css">
+        #cortina { height:300px; width: 100vw; background: #2082e4; position: absolute; top:0;top: 2em; }
         #navFixed { border-bottom:  2.5px solid #6d98239e; }
         #linkHome { background:url(images/testbackground.jpg); background-repeat: no-repeat; background-size: cover; background-position-x: -100px; }
+        #linkFeatures { border-top: 5px solid #92ad66; overflow: hidden;}
+        #linkTestimonial { background: url(http://eduktvirtual.com/lp/img/slider_bg.jpg); background-size: cover; background-attachment: fixed; border-top: 8px solid #a4be76;}
         .boxContacto { background-color: transparent; }
+        .icon-left{ width: 33%; vertical-align: middle; }
+        .icon-text{ width:65%; }
+        #three_icons .col{ border-right: 1.5px solid #bababa; }
+        #three_icons .col:last-child{ border-right: initial; }
+        .features { overflow:initial; position:relative; }
+        .cardFeatures{ z-index: 2; border: 1.2px solid lightgray;  }
+        .cardFeatures span{ background: #8ec6e2; width: initial; height: initial; margin:0; }
+        .cardFeatures ul { list-style: none; }
+        #left-course { height: 80vh; border-right: 2px solid lightgrey; background: #f4f4f4; padding-top: 20px; }
+        .valor-actual { color:#00aef0;     font-size: 18px;  font-weight: 500;}
+        .valor-anterior { color: #333333; text-decoration: line-through;}
+        .img-card-curso{ overflow: hidden; max-height: 121px; }
+        footer.new-footer{
+                background-color: rgb(21, 66, 119) !important;
+        }
+        @media(max-width: 575px){
+            #left-course{  height: auto; }
+        }
     </style>
 </head>
 
@@ -66,6 +87,10 @@
                         <li class="nav-item">
                             <a class="nav-link scroll" onclick="scroll_to('linkFeatures')"
                                 href="#linkFeatures">Características</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll" onclick="scroll_to('linkFeatures')"
+                                href="#callToActions">Cursos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link scroll" onclick="scroll_to('linkAbout')" href="#linkAbout">Sobre nosotros</a>
@@ -267,182 +292,152 @@
 
     <!-- Contenedor Main -->
     <main>
-        <a id="subir" class="scroll obsButton2" href="#linkContacto">Contactar</a>
+        <a id="subir" class="scroll obsButton2" href="#linkContacto">Registrarse</a>
         <!-- Sección Features -->
         <section class="boxFeatures fixBox" id="linkFeatures">
-
-            <h3 class="title">Principales Características</h3>
-
+            <div class="container">
+                <div class="row mb-5" id="three_icons">
+                    <div class="col col-md-4 col-lg-4">
+                        <div class="icon-box-wrapper text-center">
+                            <div class="icon-left d-inline-flex">
+                                <!-- <i class="icomoon-laptop icon"></i> -->
+                                <img src="./images/iconlanding8247.png" style="max-width: 100px">
+                            </div>
+                            <div class="icon-text d-inline-flex">
+                                <h4 class="icon-box-title">Desde donde estés, a cualquier hora</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-md-4 col-lg-4">
+                        <div class="icon-box-wrapper text-center">
+                            <div class="icon-left d-inline-flex">
+                                <!-- <i class="icomoon-laptop icon"></i> -->
+                                <img src="./images/iconlanding7.svg" style="max-width: 100px">
+                            </div>
+                            <div class="icon-text d-inline-flex">
+                                <h4 class="icon-box-title">Certificación internacional</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-md-4 col-lg-4">
+                        <div class="icon-box-wrapper text-center">
+                            <div class="icon-left d-inline-flex">
+                                <!-- <i class="icomoon-laptop icon"></i> -->
+                                <img src="./images/iconlanding6.svg" style="max-width: 100px">
+                            </div>
+                            <div class="icon-text d-inline-flex">
+                                <h4 class="icon-box-title">Impulsa tu perfil profesional</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="title">¿QUÉ QUIERES APRENDER HOY?</h3>
+            <h5 class="text-center"> Tenemos Capacitación para Todo Público </h5>
+            <h5 class="text-center">Certificado en tecnología digital por cada curso finalizado</h5>
             <div class="features">
+                <div id="cortina"></div>
                 <div class="cardFeatures">
-                    <div class="my-row y-center"><span><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>
-                        <h4>Clases Online</h4>
+                    <div class="my-row y-center"><span>
+                        <!-- <i class="fa fa-graduation-cap" aria-hidden="true"></i> -->
+                        <img class="rounded-circle" src="./images/ex.jpg">
+                    </span>
+                        <h4>Microsoft Excel</h4>
                     </div>
-                    <p>Permite al docente la creación de cursos,
-                        sílabos, grupos de estudio, tareas y
-                        proyectos. Subir contenido y materiales
-                        didácticos, compatible con múltiples
-                        formatos de archivos. Desarrollar exámenes
-                        y configurarlos por competencias.</p>
+                    <p>Programa informático que permite realizar tareas contables y financieras gracias a sus funciones, desarrolladas específicamente para ayudar a crear y trabajar con hojas de cálculo.</p>
+                    <p>Contamos con todos los niveles de aprendizaje</p>
+                    <ul class="font-vw">
+                        <li><span class="icon-check"></span>Nivel básico</li>
+                        <li><span class="icon-check"></span>Nivel Intermedio</li>
+                        <li><span class="icon-check"></span>Nivel Avanzado</li>
+                    </ul>
                     <a href="#!">Saber Más</a>
                 </div>
 
                 <div class="cardFeatures">
-                    <div class="my-row y-center"><span><i class="fa fa-puzzle-piece" aria-hidden="true"></i></span>
-                        <h4>Integración Óptima Curricular</h4>
-                    </div>
-                    <p>Facilita el manejo del currículo por
-                        competencia, integra diversidad de
-                        estrategias para la enseñanza multimodal.
-                        Comprende evaluación cualicuantitaiva
-                        configurable por competencias. Crear
-                        exámenes para ser calificados
-                        automáticamente.
+                    <div class="my-row y-center"><span>
+                        <!-- <i class="fa fa-puzzle-piece" aria-hidden="true"></i> -->
+                        <img class="rounded-circle" src="./images/wor.jpg">
 
-                        <!-- y se
-                        mostrarán en el índice de cada curso para que el estudiante pueda
-                        rendirlos. -->
-                    </p>
+                    </span>
+                        <h4>Microsoft Word</h4>
+                    </div>
+                    <p>La aplicación Word de confianza te permite crear, editar, ver y compartir con otras personas tus archivos de forma rápida y fácil. Creado para escribir textos con cualquier finalidad: académica, profesional, creativa, entre otros.</p>
+                    <p>Contamos con todos los niveles de aprendizaje</p>
+                    <ul class="font-vw">
+                        <li><span class="icon-check"></span>Nivel básico</li>
+                        <li><span class="icon-check"></span>Nivel Intermedio</li>
+                        <li><span class="icon-check"></span>Nivel Avanzado</li>
+                    </ul>
                     <a href="#!">Saber Más</a>
                 </div>
 
                 <div class="cardFeatures">
-                    <div class="my-row y-center"><span><i class="fa fa-list-alt" aria-hidden="true"></i></span>
-                        <h4>Gestión Académica
+                    <div class="my-row y-center"><span>
+                        <!-- <i class="fa fa-list-alt" aria-hidden="true"></i> -->
+                        <img class="rounded-circle" src="./images/pow.jpg">
+                    </span>
+                        <h4>Microsoft PowerPoint
                         </h4>
                     </div>
+                    <p>Eficaz herramienta de creación de presentaciones que ayuda a crear, comunicarse y colaborar con presentaciones de diapositivas. El programa contempla la posibilidad de utilizar texto, imágenes, música y animaciones.</p>
+                    <p>Contamos con todos los niveles de aprendizaje</p>
 
-                    <p>Cada dirección educativa controla sus
-                        procesos educativos, administra matrículas,
-                        docentes, grupos de estudios, nuevas aulas
-                        virtuales, configura recursos y herramientas
-                        de la plataforma, puede supervisar
-                        directamente el proceso de enseñanza y
-                        aprendizaje.
-
-                    </p>
+                    <ul class="font-vw">
+                        <li><span class="icon-check"></span>Nivel básico</li>
+                        <li><span class="icon-check"></span>Nivel Intermedio</li>
+                        <li><span class="icon-check"></span>Nivel Avanzado</li>
+                    </ul>
                     <a href="#!">Saber Más</a>
                 </div>
-
-                <div class="cardFeatures">
-                    <div class="my-row y-center"><span><i class="fa fa-wrench" aria-hidden="true"></i></span>
-                        <h4>Herramientas Pedagógicas
-                        </h4>
-                    </div>
-
-                    <p>Sala para la formación, compatible con diversos
-                        formatos. Con tutoría personalizada y
-                        retroalimentación por mensajería interna. Posee un
-                        módulo para el aprendizaje por proyectos y tareas
-                        donde el docente asigna y recolecta los trabajos,
-                        revisa, retroalimenta y califica. Además podrá
-                        cargar y/o descargar materiales educativos
-                        prediseñados como material de apoyo.
-                    </p>
-                    <a href="#!">Saber Más</a>
-                </div>
-                <div class="cardFeatures">
-                    <div class="my-row y-center"><span><i class="fa fa-users" aria-hidden="true"></i></span>
-                        <h4>Comunidad de Aprendizaje
-                        </h4>
-                    </div>
-
-                    <p>
-                        Espacio de comunicación para cultivar el
-                        conocimiento: foros, mensajería,
-                        videoconferencias. Facilita la interacción
-                        comunicativa entre docente y alumno. Cuenta
-                        con un editor avanzado, mediante una sencilla
-                        redacción de publicaciones, integrar contenido,
-                        multimedia, crear artículos, interactuar mediante
-                        comentarios, puede ser calificada la intervención
-                        del estudiante.
-                    </p>
-                    <a href="#!">Saber Más</a>
-                </div>
-                <div class="cardFeatures">
-                    <div class="my-row y-center"><span><i class="fa fa-child" aria-hidden="true"></i></span>
-                        <h4>Inmersión Familiar
-                        </h4>
-                    </div>
-
-                    <p>Los padres podrán acceder a la cartera de
-                        trabajo de los cursos de los estudiantes.
-                        Reciben notificaciones de las tareas
-                        asignadas, calificaciones, y avances por
-                        cada curso. Puede consultar los resultados
-                        de exámenes en cualquier momento vía
-                        web a través de cualquier dispositivo móvil.</p>
-                    <a href="#!">Saber Más</a>
-                </div>
-
             </div>
 
         </section>
         <!-- Fin Sección Features -->
 
         <!-- Sección Call To Actions -->
-        <section id="callToActions" class="boxCallToActions fixBox center-section">
-           
-            <div class="row">
-                <div class="callToActions">
-                    <div class="col-md-6 col-sm-12">
-                        <div class="imgCallToActions">
-                            <img src="images/pic1.png" alt="">
+        <section id="callToActions" class="boxCallToActions fixBox">
+            <input type="hidden" name="excelbasico" codigo="0114" value="http://eduktvirtual.com/lp/img/slider_bg3.jpg" />
+            <input type="hidden" name="excelintermedio" codigo="0115" value="./images/excel2.jpg" />
+            <input type="hidden" name="excelavanzado" codigo="0116" value="./images/excel3.jpg" />
+            <input type="hidden" name="wordbasico" codigo="0117" value="./images/word1.jpg" />
+            <input type="hidden" name="wordintermedio" codigo="0118" value="./images/word2.jpg" />
+            <input type="hidden" name="wordavanzado" codigo="0121" value="./images/word3.jpg" />
+            <input type="hidden" name="powerpointbasico" codigo="0119" value="./images/pow1.jpg" />
+            <input type="hidden" name="powerpointintermedio" codigo="0120" value="./images/pow2.jpg" />
+            <input type="hidden" name="powerpointavanzado" codigo="0122" value="./images/pow3.jpg" />
+            <h3 class="title text-center">Cursos online desarrollados por líderes de la industria.</h3>
+            <div class="container">
+                <div class="row">
+                    <div id="left-course" class="col-md-3 col-sm-4">
+                        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                          <a class="nav-link active" id="v-pills-all-tab" data-toggle="pill" href="#v-pills-all" role="tab" aria-controls="v-pills-all" aria-selected="true">Todos</a>
+                          <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="false">Microsoft Excel</a>
+                          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Microsoft Word</a>
+                          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Microsoft PowerPoint</a>
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
-                        <article class="contenido ">
-                            <h3 class="title">¿Cómo funciona?</h3>
-
-                            <ul class="font-vw">
-                                <li> <span class="icon-check"></span> Docentes: Uso y manejo de la plataforma, creación
-                                    de
-                                    cursos, construcción de evaluaciones y
-                                    criterios de evaluación, manejo de recursos interactivos para la socializacion del
-                                    conocimiento mediante
-                                    las comunidades de aprendizaje como foros, mensajería, video conferencias.
-
-                                </li>
-                                <li> <span class="icon-check"></span> Directivos: Control de matrículas, creación de
-                                    grupos
-                                    (o
-                                    secciones), asignación de docentes a
-                                    grupos, supervisión al progreso del estudiante.
-
-                                </li>
-                                <li> <span class="icon-check"></span> Estudiantes: Uso y manejo de la plataforma.
-
-                                </li>
-                                <li> <span class="icon-check"></span>Familia: Avances de sus hijos con notificaciones de
-                                    tareas, calificaciones y comentarios.
-
-                                </li>
-                            </ul>
-
-                        </article>
+                    <div class="col-md-9 col-sm-8">
+                        <div class="tab-content" id="v-pills-tabContent">
+                          <div class="tab-pane fade show active" id="v-pills-all" role="tabpanel" aria-labelledby="v-pills-all-tab">
+                            <div class="row"></div>
+                              
+                          </div>
+                          <div class="tab-pane fade " id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                            <div class="row">
+                            </div>
+                          </div>
+                          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                            <div class="row"></div>
+                              
+                          </div>
+                          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                            <div class="row"></div>
+                          </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="row responsive-cont">
-                        <div class="col-md-6 center">
-                            <p class="my-font text-center boxCardAnimated">Accede en cualquier lugar, desde cualquier
-                                dispositivo
-                                <br>
-                                (Multidispositivo, multiplataforma)
-                            </p>
-                        </div>
-                        <div class="col-md-6">
-                            <img src="./images/responsive-mine.png" alt="" srcset="">
-                        </div>
-                        <div class="col-sm-12">
-                            <p class="chrome">* Para una mejor experiencia, recomendamos el navegador Chrome</p>
-                        </div>
-                    </div>
-
-                </div>
+                
             </div>
         </section>
         <!-- Fin Sección Call To Actions -->
@@ -490,7 +485,7 @@
         <section class="boxSlider center fixBox" id="linkTestimonial">
         
             <div class="row">
-                <h3 class="title">Testimonios</h3>
+                <h3 class="title" style="color:white;">Testimonios</h3>
             </div>
             <div class="row">
                 <div id="carouselExampleIndicators" class="carousel slide centerSlider" data-ride="carousel">
@@ -821,10 +816,10 @@
         </div>
         <div class="col-sm-12">
             <div class="my-row center footer-logos">
-                <a class="navbar-brand center-row" href="#linkHome">
+                <!-- <a class="navbar-brand center-row" href="#linkHome">
                     <img src="./images/my-logoEdukt.png" alt="">
                     <span class="edukt">Edukt</span> <span class="maestro">Maestro</span>
-                </a>
+                </a> -->
                 <a class="navbar-brand center-row" style="position: relative;" href="#linkHome">
                     <img class="logo-fix" src="./images/Logo-y-slogan-sks.png" alt="">
                     <!-- <span class="sks">SKS</span>  -->
