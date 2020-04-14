@@ -11,6 +11,8 @@ $cuerpo = "
             Nombre: $data[nombre] <br>
             Apellidos: $data[apellidos] <br>
             Correo: $data[correo] <br>
+            Cargo: $data[cargo] <br>
+            Institución: $data[institucion] <br>
             País: $data[pais] <br>
             Departamento: $data[departamento] <br>
             Ciudad: $data[ciudad] <br>

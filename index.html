@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/estilos.css">
 
     <link rel="stylesheet" href="css/mine.css">
+
     <link rel="stylesheet" href="css/observaciones.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
@@ -82,7 +83,10 @@
         <section id="linkHome" class="fixBox">
 
             <div class="boxLogo">
-                <h1 class="title"><span class="edukt">Edukt</span><span class="maestro">Maestro</span></h1>
+                <h1 class="title"><span class="edukt">Edukt</span><span class="maestro">Maestro</span><span
+                        class="edukt" style="font-size: 30px;">:</span></h1>
+                <h2 class="slogan1 ">Plataforma virtual para colegios, universidades e institutos
+                </h2>
             </div>
             <div class="row no-mg">
                 <div class="col-md-12 col-lg-8">
@@ -96,11 +100,12 @@
                         <div class="boxHeader row">
                             <div class="col-sm-12 col-md-7">
                                 <div class="textosHeader">
-                                    <h1><b> Enseñanza Virtual</b></h1>
-                                    <p>Una plataforma virtual para el aprendizaje, orientado a facilitar la experiencia
-                                        de
-                                        ENSEÑANZA Y APRENDIZAJE a distancia, usando diferentes recursos multimedia,
-                                        ofreciendo la facilidad de crear sus propios cursos, evaluaciones, etc.
+                                    <h1><b>Educación Online</b></h1>
+                                    <p>EDUKTMaestro, es un sistema de gestión de contenido de aprendizaje, espacio
+                                        virtual orientado a facilitar la experiencia de ENSEÑANZA Y APRENDIZAJE a
+                                        distancia, usando diferentes recursos multimedia, ofreciendo la facilidad de
+                                        crear cursos.
+
                                     </p>
                                     <a class="botonGetStarted" onclick="scroll_to('linkFeatures')" href="#"
                                         rel="nofollow noopener">Saber
@@ -110,15 +115,22 @@
                             <div class="col-sm-12 col-md-5 fix-flex">
                                 <div class="imgHeader">
 
-                                    <div class="row">
-                                        <div class="col-sm-12"><img src="images/landing_1.png" alt=""></div>
-                                        <div class="col-sm-12">
-                                            <p class="boxCardAnimated adaptate "><i>Adáptate,</i>
-                                                <br>
-                                                Únete al cambio mundial
-                                            </p>
-                                        </div>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-12"><img src="images/14-04-2020/landing_1.png" alt="">
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <p class="adaptate "><i>Adáptate,</i>
+                                                    <br>
+                                                    Únete al cambio mundial
+                                                </p>
 
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 text-center adaptate"> <small><i>100%
+                                                        práctico</i></small></div>
+                                            <div class="col-sm-12 col-md-6 text-center adaptate"> <small><i>100%
+                                                        eficaz</i></small></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -133,7 +145,8 @@
                     <!-- Sección Contacto -->
                     <section class="boxContacto fixBox oneFix obsContacto" id="linkContacto">
                         <h3 class="title">Contáctanos</h3>
-
+                        <h5 class="text-center"><i class="x-font">(Solo para colegios, institutos y universidades) </i>
+                        </h5>
                         <div class="container contacto">
                             <form id="miForm" onsubmit="return validate()">
                                 <div class="form-row">
@@ -154,7 +167,24 @@
                                     <input type="email" class="form-control" id="inputEmail" placeholder="Email..."
                                         required>
                                 </div>
-
+                                <div class="form-group">
+                                    <label for="inputInstitucion"><b>Nombre I.E.</b></label>
+                                    <input type="text" class="form-control" name="" id="inputInstitucion"
+                                        aria-describedby="helpId" placeholder="Nombre de su insitución educativa...">
+                                </div>
+                                <div class="form-group">
+                                    <label for="selectCargo"><b>Cargo</b></label>
+                                    <select class="form-control" name="" required id="selectCargo">
+                                        <option selected value="0">Cargo...</option>
+                                        <option value="Dueño">Dueño</option>
+                                        <option value="Promotor">Promotor</option>
+                                        <option value="Director">Director</option>
+                                        <option value="Profesor">Profesor</option>
+                                        <option value="Coordinador académico">Coordinador académico</option>
+                                        <option value="Asesor de informática y sistemas">Asesor de informática y
+                                            sistemas</option>
+                                    </select>
+                                </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputName"><b>País</b></label>
@@ -171,14 +201,16 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-12 center-row check-cont">
                                         <div class="form-check" style="display:inline-block;">
-                                            <input onchange="formatoNumeros(this)" class="form-check-input radiotelefono" type="radio" name="Radios"
+                                            <input onchange="formatoNumeros(this)"
+                                                class="form-check-input radiotelefono" type="radio" name="Radios"
                                                 id="Radios1" value="option1">
                                             <label class="form-check-label" for="Radios1">
                                                 Teléfono
                                             </label>
                                         </div>
                                         <div class="form-check" style="display:inline-block;">
-                                            <input checked="checked" onchange="formatoNumeros(this)" class="form-check-input radiotelefono" type="radio" name="Radios"
+                                            <input checked="checked" onchange="formatoNumeros(this)"
+                                                class="form-check-input radiotelefono" type="radio" name="Radios"
                                                 id="Radios2" value="option2">
                                             <label class="form-check-label" for="Radios2">
                                                 Celular
@@ -234,6 +266,8 @@
                         <img src="./images/empresas/logo_abaco.jpg" alt="">
                         <img src="./images/empresas/esan.png" alt="">
                         <img src="./images/empresas/partner10.png" alt="">
+                        <img src="./images/empresas/logo-piura.jpg" alt="">
+                        <img src="./images/empresas/logo-tacna.jpg" alt="">
                         <div class="blur"></div>
                     </div>
                 </div>
@@ -249,9 +283,8 @@
         <a id="subir" class="scroll obsButton2" href="#linkContacto">Contactar</a>
         <!-- Sección Features -->
         <section class="boxFeatures fixBox" id="linkFeatures">
-
             <h3 class="title">Principales Características</h3>
-
+            <!-- working -->
             <div class="features">
                 <div class="cardFeatures">
                     <div class="my-row y-center"><span><i class="fa fa-graduation-cap" aria-hidden="true"></i></span>
@@ -356,13 +389,80 @@
                 </div>
 
             </div>
+        </section>
+        <section id="diapo-3" class="boxFeatures fixBox center x-white">
+            <div class="col-sm-12">
+                <h3 class="x-font t-diapo-1">Actores del sistema de gestión de contenido de aprendizaje
+                </h3>
+            </div>
+            <img src="./images/14-04-2020/diapo-3.png" alt="">
+        </section>
+        <section class="boxFeatures fixBox center x-blue ">
+            <div class="container cont-diapo-5">
+                <div class=" g-icon-1 g-derecha ">
+                    <img class="g-icon " src="./images/14-04-2020/diapo-5/icon-1.png" alt="">
+                    <h4 class="x-color-white">
+                        Currículo
+                    </h4>
+                </div>
+                <h1 class="g-title">Módulos</h1>
+                <div class=" g-icon g-icon-2 ">
+                    <img class="" src="./images/14-04-2020/diapo-5/icon-2.png" alt="">
+                    <h4 class="x-color-white">
+                        Recursos / Herramientas
+                    </h4>
+                </div>
 
+                <div class=" g-icon g-icon-3 ">
+                    <img class="" src="./images/14-04-2020/diapo-5/icon-3.png" alt="">
+                    <h4 class="x-color-white">
+                        Método de enseñanza
+                    </h4>
+                </div>
+
+                <div class=" g-icon g-icon-4 g-subir ">
+                    <img class="" src="./images/14-04-2020/diapo-5/icon-4.png" alt="">
+                    <h4 class="x-color-white">
+                        Evaluación cuali-cuanti
+                    </h4>
+                </div>
+
+                <div class=" g-icon g-icon-5 ">
+                    <img class="" src="./images/14-04-2020/diapo-5/icon-5.png" alt="">
+                    <h4 class="x-color-white">
+                        Aula virtual
+                    </h4>
+                </div>
+
+                <div class=" g-icon g-icon-6 ">
+                    <img class="" src="./images/14-04-2020/diapo-5/icon-6.png" alt="">
+                    <h4 class="x-color-white">
+                        Padres de familia
+                    </h4>
+                </div>
+
+                <div class=" g-icon g-icon-7 g-izquierda ">
+                    <img class="" src="./images/14-04-2020/diapo-5/icon-7.png" alt="">
+                    <h4 class="x-color-white">
+                        Comunidad de aprendizaje <small><i>(Llamada virtual, clases en vivo)</i></small>
+                    </h4>
+                </div>
+
+                <div class=" g-icon g-icon-8 g-subir-centro">
+                    <img class="" src="./images/14-04-2020/diapo-5/icon-8.png" alt="">
+                    <h4 class="x-color-white">
+                        Control para la dirección
+                    </h4>
+                </div>
+
+
+            </div>
         </section>
         <!-- Fin Sección Features -->
 
         <!-- Sección Call To Actions -->
         <section id="callToActions" class="boxCallToActions fixBox center-section">
-           
+
             <div class="row">
                 <div class="callToActions">
                     <div class="col-md-6 col-sm-12">
@@ -454,9 +554,15 @@
                         expandirnos por todo el país. Alcanzando como resultado, la oportunidad de atender proyectos
                         educativos de: TICs para docentes, habilidades gerenciales, gestión educativa, ciencia,
                         tecnología y ambiente.
-                        Somos expertos en educación a distancia, capacitando hasta la fecha a más de 10.000 alumnos en
+                        Somos expertos en educación a distancia, capacitando hasta la fecha a más de 10.000 alumnos y
+                        más de 1,200 instituciones en
                         toda Latinoamérica en países como Argentina, Bolivia, Chile, Colombia, Costa Rica, Ecuador,
                         México, Panamá y Perú.</p>
+                    <p class="font-vw">
+                        Somos la mejor alternativa virtual para trabajar fuera de las aulas presenciales.
+                        Asegúrate de tener una plataforma que te permita dictar clases virtuales con tus profesores y
+                        bajo tu propia metodología.
+                    </p>
                     <a class="botonGetStarted" onclick="scroll_to('linkContacto')" href="#linkContacto">Contáctanos</a>
                 </article>
             </div>
@@ -467,7 +573,7 @@
 
         <!-- Sección Testimonios -->
         <section class="boxSlider center fixBox" id="linkTestimonial">
-        
+
             <div class="row">
                 <h3 class="title">Testimonios</h3>
             </div>
@@ -538,6 +644,7 @@
                                     </div>
                                     <!--/.media -->
                                     <p>
+
                                         El curso es muy práctico e interesante, siempre me conecté muy bien con la
                                         plataforma. Los contenidos están bien dosificados y facilitan el aprendizaje.
                                         Las autoevaluaciones me sirven para ir midiendo mi aprendizaje y los exámenes
@@ -672,6 +779,8 @@
                 <div class="col-lg-3 col-md-3 col-sm-3">
                     <p class="margin-zero font-medium">Smart Knowledge Solutions LLC</p>
                     <p class="margin-zero font-medium">Weston 33331, Florida, USA</p>
+                    <p class="margin-zero font-medium">Av. La Encalada 738 piso 4, Surco Lima.
+                    </p>
                     <p class="margin-zero font-medium">All Rights Reserved</p>
                 </div>
                 <div class="col-lg-5 col-md-5 col-sm-5">
@@ -683,22 +792,34 @@
                                     class="fa fa-phone"></i></span> +51 1-436-6713</li>
                         <li class=""><span style="font-size: medium; text-shadow: 1px 1px 4px black; color: #f1f1f1;"><i
                                     class="fa fa-phone"></i></span> Se habla español : 954-678-6669</li>
-
+                        <li class=""><span style="font-size: medium; text-shadow: 1px 1px 4px black; color: #f1f1f1;"><i
+                                    class="fa fa-whatsapp"></i></span> +51-989 032 416</li>
+                        <li class=""><span style="font-size: medium; text-shadow: 1px 1px 4px black; color: #f1f1f1;"><i
+                                    class="fa fa-whatsapp"></i></span> +51 960 177 900</li>
                     </ul>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4">
 
                     <ul class="list-group" style="padding:0; list-style: none">
 
+
                         <li class=""><span style="font-size: medium; text-shadow: 1px 1px 4px black; color: #f1f1f1;"><i
-                                    class="fa fa-whatsapp"></i></span> +51-989 032 416</li>
-                        <li class=""><span style="font-size: medium; text-shadow: 1px 1px 4px black; color: #f1f1f1;"><i
-                                    class="fa fa-whatsapp"></i></span> +51 960 177 900</li>
+                                    class="fa fa-whatsapp"></i></span> +51 989 062 372</li>
                         <li class=""><span style="font-size: medium; text-shadow: 1px 1px 4px black; color: #f1f1f1;"><i
                                     class="fa fa-envelope"></i></span> alex.mamud@smartknowledgesolution.com</li>
                         <li class=""><span style="font-size: medium; text-shadow: 1px 1px 4px black; color: #f1f1f1;"><i
                                     class="fa fa-envelope"></i></span>
+                            coordinacion@eduktvirtual.com
+                        </li>
+
+                        <li class=""><span style="font-size: medium; text-shadow: 1px 1px 4px black; color: #f1f1f1;"><i
+                                    class="fa fa-envelope"></i></span>
+                            ddiaz@eduktvirtual.com
+                        </li>
+                        <li class=""><span style="font-size: medium; text-shadow: 1px 1px 4px black; color: #f1f1f1;"><i
+                                    class="fa fa-envelope"></i></span>
                             info@eduktvirtual.com</li>
+
                     </ul>
                     <!-- <div class="mt-5">
                         <h5 class="font-family-medium" style="">Síguenos en:</h5>
@@ -710,7 +831,7 @@
                     </div> -->
                 </div>
             </div>
-            
+
         </div>
         <div class="col-sm-12">
             <div class="my-row center footer-logos">

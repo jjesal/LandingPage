@@ -4,6 +4,8 @@ function enviar() {
         nombre: $('#inputName').val(),
         apellidos: $('#inputLastName').val(),
         correo: $('#inputEmail').val(),
+        cargo:$('#selectCargo').val(),
+        institucion:$('#inputInstitucion').val(),
         pais: $('#select-pais').val(),
         departamento: $('#select-departamento').val(),
         ciudad: $('#select-ciudad').val(),

@@ -168,7 +168,7 @@ a.botonGetStarted:hover {
 }
 
 .imgHeader img {
-    width: 80%;
+    /* width: 80%; */
     transform: translateX(0);
     opacity: 1;
     animation: animacion1 1s ease-out;
@@ -615,9 +615,7 @@ a.botonGetStarted:hover {
         justify-content: center;
         align-items: center;
     }
-    .imgHeader img {
-        width: 95%;
-    }
+
     /* ESTILOS FEATURES */
     .boxFeatures {
         justify-content: center;
