@@ -1,3 +1,15 @@
+.cont-diapo-5 h4.x-color-white {
+    font-size: max(1.25vw, 1rem);
+}
+
+.cont-diapo-5 {
+    /* width: 100%; */
+    margin: auto;
+    display: grid;
+    grid-template-rows: repeat(4, minmax(8rem, 9vw));
+    grid-template-columns: repeat(7, minmax(5rem, 9vw));
+}
+
 .diapo4-prim-text {
     color: black;
     font-size: 1.3vw;
@@ -20,7 +32,7 @@
 
 .diapo4-grid {
     display: grid;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(6, auto);
     grid-template-rows: repeat(5, auto);
     text-align: center;
     gap: 1rem;
@@ -37,13 +49,15 @@
 }
 
 .diapo4-g-title>h1 {
-    font-size: 2.1vw;
+    /* font-size: 2.1vw; */
+    font-size: max(2.1vw, 1.3rem);
     font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
     color: black;
 }
 
 .diapo4-g-subtitle>h2 {
-    font-size: 1.7vw;
+    /* font-size: 1.7vw; */
+    font-size: max(1.7vw, 1.2rem);
     color: black;
     font-family: 'Segoe UI Light', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -52,7 +66,7 @@
     align-content: center;
     align-items: center;
     display: grid;
-    font-size: 1.1vw;
+    font-size: max(1.1vw, 1rem);
 }
 
 .diapo4-g-1 {
@@ -68,6 +82,31 @@
 .diapo4-g-3 {
     grid-column: 5/6;
     grid-row: 2/3;
+}
+
+.diapo4-g-4 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.diapo4-g-5 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.diapo4-g-6 {
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+.diapo4-g-7 {
+    grid-column: 4/5;
+    grid-row: 3/4;
+}
+
+.diapo4-g-8 {
+    grid-column: 5/6;
+    grid-row: 3/4;
 }
 
 .diapo4-g-subtitle {
@@ -241,14 +280,17 @@ div.mdl-grid.dt-table {
     font-weight: 100;
     color: rgb(2, 94, 187);
     font-style: italic;
-    max-width: 800px;
-    font-size: 1.9vw;
+    /* max-width: 800px; */
+    text-align: center;
+    font-size: max(1.9vw, 1.3rem);
     margin-top: 3px;
 }
 
 .fix-img-x-1 {
     max-height: 17rem;
     max-width: 100%;
+    display: block;
+    margin: auto;
 }
 
 .x-full-w {
@@ -327,19 +369,15 @@ div.mdl-grid.dt-table {
     grid-row: 2/3;
 }
 
+.g-icon-1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
 .g-title {
     color: white;
     text-align: center;
     grid-column: 3/6;
-}
-
-.cont-diapo-5 {
-    width: 100%;
-    margin: auto;
-    display: grid;
-    grid-template-rows: repeat(4, 10rem);
-    grid-template-columns: repeat(7, 10rem);
-    /* min-height: 100vh; */
 }
 
 .t-diapo-1 {
