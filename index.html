@@ -10,7 +10,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" href="./libs/material/material.min.css">
     <script src="./libs/sweetalert/sweetalert2.9.js"></script>
     <script src="./libs/phonumbr/jquery.caret.js"></script>
     <script src="./libs/phonumbr/libphonenumber-js.min.js"></script>
@@ -21,8 +21,12 @@
     <link rel="stylesheet" type="text/css" href="icons/icomoon.css">
     <link rel="stylesheet" href="libs/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="./libs/DataTables/jquery.dataTables.min.css">
 
     <link rel="stylesheet" href="css/mine.css">
+
+    <link rel="stylesheet" href="./libs/DataTables/dataTables.material.min.css">
+    <link rel="stylesheet" href="./libs/DataTables/responsive.dataTables.min.css">
 
     <link rel="stylesheet" href="css/observaciones.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
@@ -175,7 +179,7 @@
                                 <div class="form-group">
                                     <label for="selectCargo"><b>Cargo</b></label>
                                     <select class="form-control" name="" required id="selectCargo">
-                                        <option selected value="0">Cargo...</option>
+                                        <option disabled selected value="0">Cargo...</option>
                                         <option value="Dueño">Dueño</option>
                                         <option value="Promotor">Promotor</option>
                                         <option value="Director">Director</option>
@@ -183,6 +187,7 @@
                                         <option value="Coordinador académico">Coordinador académico</option>
                                         <option value="Asesor de informática y sistemas">Asesor de informática y
                                             sistemas</option>
+                                        <option value="Otro">Otro</option>
                                     </select>
                                 </div>
                                 <div class="form-row">
@@ -282,8 +287,244 @@
     <main>
         <a id="subir" class="scroll obsButton2" href="#linkContacto">Contactar</a>
         <!-- Sección Features -->
+        <section id="diapo-3" class="fixBox center x-second">
+            <div class="table-cont">
+                <table id="my-table" class="mdl-data-table x-font" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Características</th>
+                            <th>Google Classroom
+                            </th>
+                            <th>Showbie</th>
+                            <th>Sieweb</th>
+                            <th>EduktMaestro <br>
+                                <small>(Nuestra solución)</small>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="">
+                        <tr>
+                            <td>
+                                <div class="col-text">
+                                    Cree sus contenidos de sus propios cursos adaptados a su necesidad pedagógica
+                                </div>
+                            </td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle table-check" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle table-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-text">
+                                    Adaptable a cualquier diseño curricular
+                                </div>
+                            </td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle table-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-text">Evaluaciones por competencias, con diversidad valorativa:
+                                    cualitativa, cuantitativa,
+                                    autoevaluación, heteroevaluación, diagnósticas, formativas, sumativas, entre otras
+                                </div>
+                            </td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle table-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-text">Diferentes tipos de instrumentos para la evaluación de los
+                                    aprendizajes: rúbricas ,
+                                    exámenes, listas de cotejo</div>
+                            </td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle table-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-text"> Evaluaciones altamente válidas y resultados inmediatos por
+                                    competencias</div>
+
+                            </td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle table-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-text">
+                                    Conferencias en vivo a través de Zoom (*)
+                                </div>
+
+                            </td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle table-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-text">
+                                    Sala de capacitaciones complementarias, diseñadas en diversos formatos: video,
+                                    enlaces,
+                                    audio, pdf, XLS, presentaciones electrónicas, entre otras, se acompaña de un espacio
+                                    para interactuar entre docente-estudiante, estudiante-estudiante, podrán subir
+                                    tareas o
+                                    proyectos
+                                </div>
 
 
+                            </td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle table-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-text">
+                                    <b>Inmersión familiar: </b> pensada para integrar: Padres de familia, estudiantes,
+                                    docentes y colegios. Con notificaciones y/o alertas por correo electrónico de tareas
+                                    o
+                                    trabajos asignados, programación de exámenes, tareas calificadas
+                                </div>
+
+
+                            </td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle table-check" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle table-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-text">
+                                    <b>Gestión académica:</b> puede administrar Instituciones por sede principal o sedes
+                                    foráneas, mediante el control de matrículas, crea de grupos de estudios, crear
+                                    nuevas
+                                    aulas virtuales, asignación de docentes, reportes de rendimiento académico por
+                                    grupos y
+                                    por sedes. También controla el acceso y asignación de usuarios y contraseña,
+                                    configurar
+                                    recursos y herramientas de la plataforma
+                                </div>
+
+
+                            </td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle table-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-text">
+                                    <b>Supervisión Educativa:</b> al proceso de enseñanza y aprendizaje de las aulas
+                                    virtuales, permite monitorear el desempeño del estudiante y el docente en el aula
+                                    virtual, acompaña el rendimiento académico de los estudiantes, permitiendo tomar
+                                    decisiones inmediatas para crear reforzamientos dentro del aula, esto asegura el
+                                    alcance
+                                    de los objetivos de aprendizaje
+                                </div>
+
+
+                            </td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle table-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-text">
+                                    <b>Servicio Educativo a Distancia</b> con enforque orientado a competencias y
+                                    mecanismos
+                                    de retroalimentación constante a los estudiantes.
+                                </div>
+
+
+                            </td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle table-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-text">
+                                    <b>Supervisión de la prestación de la adaptación del Plan de Recuperación: </b>La
+                                    UGEL
+                                    supervisa el cumplimiento de la presentación del Plan de Recuperación y su
+                                    adaptación,
+                                    según corresponda, así como la comunicación a los usuarios del servicio educativo
+                                    del
+                                    referido Plan, de acuerdo a las exigencias establecidas.
+                                </div>
+
+
+                            </td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle table-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-text">
+                                    <b>Supervisión de la prestación del servicio educativo a distancia:</b> Las UGEL
+                                    supervisan, a través de la plataforma, la prestación del servicio educativo a
+                                    distancia
+                                    a cargo de IE.
+                                </div>
+
+                            </td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle table-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-text">
+                                    <b>Multidispositivo y Multiplataforma</b>, plataforma moderna que permite a los
+                                    usuarios
+                                    (profesores, alumnos, directivos, padres de familia, etc.) conectarse desde un
+                                    dispositivo celular Android o Apple (IOS), Tablet, laptop, desktop con las mismas
+                                    opciones y características.
+                                </div>
+
+
+                            </td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle table-check" aria-hidden="true"></i></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="col-text">
+                                    <b>Panel de control administrativo, pedagógico.</b>
+                                </div>
+
+                            </td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-times table-x" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle table-check" aria-hidden="true"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
         <section id="diapo-3" class="boxFeatures fixBox center ">
             <div class="col-sm-12">
                 <h3 class="x-font t-diapo-1">Actores del sistema de gestión de contenido de aprendizaje
@@ -350,6 +591,75 @@
                 </div>
 
 
+            </div>
+        </section>
+        <section class="fixBox x-second center  x-pad-fix">
+            <div class="row x-full-w">
+                <div class="callToActions">
+                    <div class="col-md-6 col-sm-12">
+                        <article class="diapo4-grid">
+                            <div class="diapo4-g-title">
+                                <h1>Sistema de gestión de contenido de aprendizaje
+                                </h1>
+                            </div>
+                            <div class="diapo4-text diapo4-g-1 diapo4-prim-text">
+                                Crea
+                                (docente)
+                            </div>
+                            <div class="diapo4-text diapo4-g-2 diapo4-prim-text">
+                                Gestiona
+                                (docente+adm)
+
+                            </div>
+                            <div class="diapo4-text diapo4-g-3 diapo4-prim-text">Administra
+                            </div>
+                            <div class="diapo4-text diapo4-g-4">Desarrolla y publica contenidos propios
+                            </div>
+                            <div class="diapo4-text diapo4-g-5">Experiencia formativa incorporando documentos, videos,
+                                audios…
+                            </div>
+                            <div class="diapo4-text diapo4-g-6">Cursos y aulas virtuales
+                            </div>
+                            <div class="diapo4-text diapo4-g-7">Actividades para el acceso de los estudiantes al
+                                aprendizaje
+                            </div>
+                            <div class="diapo4-text diapo4-g-8">Clases en vivo on line por docentes
+                                Trabajos práctico
+                            </div>
+                            <div class="diapo4-g-subtitle">
+                                <h2>Dimensiones Pedagógicas</h2>
+                            </div>
+                            <div class="diapo-4-g-subcont">
+                                <div class="diapo4-text diapo4-g-10">
+                                    <b>INFORMATIVA </b> para acceso autónomo del estudiante
+
+                                </div>
+                                <div class="diapo4-text diapo4-g-20"><b>PRÁCTICA</b> experiencia constante del
+                                    estudiante y
+                                    planificación de tareas docente
+                                </div>
+                                <div class="diapo4-text diapo4-g-30"><b>COMUNICATIVA</b> Interacción on line vivo entre
+                                    alumno y docente (videoconferencia..)
+                                </div>
+                                <div class="diapo4-text diapo4-g-40">
+                                    <b>TUTORIA Y EVALUATIVA</b> acompañamiento constante y evaluación
+
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="imgCallToActions">
+                            <div class="col-sm frase-img text-center">
+                                Personaliza la
+                                experiencia educativa
+                                a medida
+                            </div>
+                            <img class="img-diapo4" src="images/14-04-2020/diapo-4.png" alt="">
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- Fin Sección Features -->
@@ -497,7 +807,7 @@
                 </div>
             </div>
         </section>
-        <section class="fixBox x-white center">
+        <section class="fixBox x-white center x-pad-fix">
             <div class="row x-full-w">
                 <div class="callToActions">
                     <div class="col-md-6 col-sm-12">
@@ -534,8 +844,111 @@
                 </div>
             </div>
         </section>
+        <section class="fixBox x-second x-pad-fix">
+            <div class="g-diap12">
+                <div class="g-diap12-title">
+                    <h1>Control para la alta dirección</h1>
+                    <h3>Cada Coordinador educativo controla sus procesos educativos</h3>
+                </div>
+                <div class="g-diap12-t1 g-diap12-cont">
+                    <div class="g-diap12-cont-1">
+                        <img src="./images/14-04-2020/check.png" alt="">
+                    </div>
+                    <div class="g-diap12-cont-2">
+                        <h3>Panel de control</h3>
+                        <p class="font-vw">Administrar las matrículas, acceso y asignación
+                            de docentes y alumnos, crear grupos de estudios, crear nuevas aulas virtuales, configurar
+                            recursos y herramientas de la plataforma.
+                        </p>
+                    </div>
+                </div>
+                <div class="g-diap12-t2 g-diap12-cont">
+                    <div class="g-diap12-cont-1">
+                        <img src="./images/14-04-2020/check.png" alt="">
+                    </div>
+                    <div class="g-diap12-cont-2">
+                        <h3>Panel de control</h3>
+                        <p class="font-vw">Administrar las matrículas, acceso y asignación
+                            de docentes y alumnos, crear grupos de estudios, crear nuevas aulas virtuales, configurar
+                            recursos y herramientas de la plataforma.
+                        </p>
+                    </div>
+                </div>
+                <div class="g-diap12-t3 g-diap12-cont">
+                    <div class="g-diap12-cont-1">
+                        <img src="./images/14-04-2020/check.png" alt="">
+                    </div>
+                    <div class="g-diap12-cont-2">
+                        <h3>Panel de control</h3>
+                        <p class="font-vw">Administrar las matrículas, acceso y asignación
+                            de docentes y alumnos, crear grupos de estudios, crear nuevas aulas virtuales, configurar
+                            recursos y herramientas de la plataforma.
+                        </p>
+                    </div>
+                </div>
+                <div class="g-diap12-img">
+                    <img class="img-diap-12" src="images/14-04-2020/diapo-12.png" alt="">
+                </div>
+                <div class="g-diap12-t4">
+                    <div class="col-sm frase-img text-center">
+                        Creamos un servicio para el dominio de los procesos pedagógicos de cada Colegio, Universidad e
+                        Institución Educativa.
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row x-mg-bottom x-full-w">
+                <div class="callToActions">
+                    <div class="col-md-6 col-sm-12 center">
+                        <div class="imgCallToActions">
+                            <img class="fix-img-x-1" src="images/14-04-2020/diapo-12.png" alt="">
+                            <div class="col-sm frase-img">Herramientas iluminativas
+                                que motivan
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <article class="contenido ">
+                            <h3 class="title integracion">¿Cómo son las clases en EDUKTMaestro?</h3>
+                            <ul class="font-vw">
+                                <li> <span class="icon-check"></span> Creación de un aula virtual
+
+                                </li>
+                                <li> <span class="icon-check"></span> Tutoría personalizada, retroalimentación por
+                                    mensajería interna
+
+                                </li>
+                                <li> <span class="icon-check"></span> Área de retroalimentación social para ampliar el
+                                    conocimiento, es una vista con historial de preguntas y respuestas en los videos,
+                                    documentos o audios subidos por el docente.
+
+                                </li>
+                                <li> <span class="icon-check"></span>Libros de trabajo descargables, son tareas de
+                                    desarrollo en casa, subido por el docente al aula.
+
+                                </li>
+                                <li> <span class="icon-check">
+                                    </span>Espacios comunitarios para cultivar el conocimiento,
+                                    permiten aprender juntos, a través de videoconferencias, salas virtuales, foros,
+                                    mensajería.
+                                </li>
+                                <li> <span class="icon-check">
+                                    </span>Sala de capacitaciones complementarias, diseñadas en
+                                    diversos formatos, video, presentaciones electrónicas, entre otras, se acompaña
+                                    de un espacio para interactuar entre docente-estudiante, estudiante-estudiante,
+                                    podrán subir tareas o proyectos.
+                                </li>
+                                <li> <span class="icon-check">
+                                    </span>Creación y carga de tarea, proyectos, libros de trabajo,
+                                    cursos prediseñados compatibles con diversas aplicaciones
+                                </li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </div> -->
+        </section>
         <!-- Sección About -->
-        <section class="boxAbout fixBox" id="linkAbout">
+        <section class="boxAbout fixBox x-white" id="linkAbout">
 
             <h3 class="title">Sobre Nosotros</h3>
 
@@ -585,7 +998,7 @@
         <!-- Fin Sección About -->
 
         <!-- Sección Testimonios -->
-        <section class="boxSlider center fixBox" id="linkTestimonial">
+        <section class="boxSlider center fixBox x-second" id="linkTestimonial">
 
             <div class="row">
                 <h3 class="title">Testimonios</h3>
@@ -631,7 +1044,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="carousel-item">
                             <div class="col-md-12 ">
                                 <div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms"
@@ -744,8 +1156,6 @@
 
                         </div>
                     </div>
-
-
                 </div>
             </div>
             <div class="row texto-demo">
@@ -887,8 +1297,39 @@
     <script src="js/app.js"></script>
     <script src="js/mine.js"></script>
     <script src="js/api.js"></script>
+    <script src="./libs/DataTables/jquery.dataTables.min.js"></script>
+    <script src="./libs/DataTables/dataTables.material.min.js"></script>
+    <script src="./libs/DataTables/dataTables.responsive.min.js"></script>
     <script>
+        $.extend($.fn.dataTable.defaults, {
+            responsive: true
+        });
+        $(document).ready(() => {
+            $('#my-table').DataTable({
+                responsive: true,
+                targets: [0, 1, 2],
+                className: 'mdl-data-table__cell--non-numeric',
+                searching: false,
+                ordering: false,
+                paging: false,
+                info: false,
+                bLengthChange: false,
 
+                language: {
+                    search: "Buscar:",
+                    lengthMenu: "Mostrando las &nbsp _MENU_ &nbsp primeras publicaciones",
+                    info: "Mostrando _START_ a _END_ publicaciones de un total de _TOTAL_ ",
+                    paginate: {
+                        first: "Primera página",
+                        previous: "Anterior",
+                        next: "Siguiente",
+                        last: "Última página"
+                    }
+                }
+            }/*{
+               
+            }*/);
+        });
         // Detect all clicks on the document
         document.addEventListener('click', function (event) {
             if (event.target.querySelector('#scrollsections-navigation') == null) {

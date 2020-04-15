@@ -32,21 +32,33 @@ function enviar() {
             $('#inputcode1').val('');
             $('#inputphone1').val('');
             $('#message').val('');
+            $('#inputInstitucion').val('');
+            $('#selectCargo').val('');
         })
     })
 }
 
 var sizeNumber = null;
 function validate() {
-    let code = $('#inputcode1').val();
     let number = $('#inputphone1').val();
-    if (number!='') {
-        enviar();
-        return false;
-    } else {
-        alert("El número que ingresaste no es valido");
-        return false;
+    let msg=null;
+    if (number=='') {
+        msg="El número que ingresaste no es valido";
+    } 
+
+    if ($('#select-departamento').val()==0) {
+        msg="Seleccione un departamento!"
     }
+    if ($('#select-pais').val()==0) {
+        msg="Seleccione un país!"
+    }
+    console.log(msg)
+    if (msg!=null) {
+        alert(msg);
+    } else {
+        enviar();
+    }
+    return false;
 
 }
 
