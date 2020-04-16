@@ -1,4 +1,48 @@
 @media (max-width: 576px) {
+
+    .col-text {
+        min-width: 70vw;
+    }
+    .fixBox {
+        padding-top: 1rem;
+        min-height: auto;
+    }
+    .g-diap12 {
+        grid-auto-flow: row;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        row-gap: 1.4rem;
+    }
+    .g-diap12-t4 .frase-img {
+        position: relative;
+        top: -1rem;
+    }
+    .g-diap12-img {
+        grid-row: auto;
+    }
+    .img-diap-12 {
+        max-height: 17rem;
+    }
+    .g-diap12-title {
+        grid-row: auto;
+        grid-column: auto;
+    }
+    .g-diap12-t1 {
+        grid-row: auto;
+        grid-column: auto;
+    }
+    .g-diap12-t2 {
+        grid-row: auto;
+        grid-column: auto;
+    }
+    .g-diap12-t3 {
+        grid-row: auto;
+        grid-column: auto;
+    }
+    .g-diap12-t4 {
+        grid-row: auto;
+        grid-column: auto;
+    }
     .diapo4-grid {
         grid-auto-flow: row;
     }
@@ -93,7 +137,12 @@
 
 /* // Medium devices (tablets, 768px and up) */
 
-@media (min-width: 768px) {}
+@media (max-width: 768px) {
+    .boxLogo {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 @media (min-width: 1000px) {
     .slogan1 {
@@ -127,17 +176,17 @@
     .slogan {
         font-size: 20px;
     }
-    .font-vw {
+    /* .font-vw {
         font-size: 14px !important;
-    }
+    } */
     .textosHeader>p {
         width: 100% !important;
         font-size: 18px !important;
     }
-    .edukt {
+    a>.edukt {
         display: none;
     }
-    .maestro {
+    a>.maestro {
         display: none;
     }
     .empresas>img {

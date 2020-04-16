@@ -560,7 +560,7 @@ a.botonGetStarted:hover {
 
 @media screen and (max-width:800px) {
     .boxLogo {
-        display: none;
+        /* display: none; */
     }
     /* ESTILOS NAVBAR */
     .navbar-brand {
@@ -706,7 +706,7 @@ a.botonGetStarted:hover {
 
 @media screen and (max-width:400px) {
     .boxLogo {
-        display: none;
+        /* display: none; */
     }
     .current {
         border-bottom: 2px solid #f5f5f5;

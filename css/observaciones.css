@@ -1,3 +1,7 @@
+.boxLogo{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
 .cont-diapo-5 h4.x-color-white {
     font-size: max(1.25vw, 1rem);
 }
@@ -151,7 +155,7 @@ table.dataTable thead th, table.dataTable thead td {
 }
 
 .mdl-data-table th {
-    font-size: 1.2vw;
+    font-size: max(1.2vw,1.2rem);
     color: rgb(51, 51, 51);
     vertical-align: inherit;
 }
@@ -164,7 +168,7 @@ div.mdl-grid.dt-table {
     white-space: normal;
     /* max-width: 80rem; */
     text-align: start;
-    font-size: 1vw;
+    font-size: max(1vw,1rem);
 }
 
 .mdl-data-table th, .mdl-data-table td {
@@ -185,9 +189,10 @@ div.mdl-grid.dt-table {
 .g-diap12 {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(4, minmax(auto, 11rem));
+    grid-template-rows: repeat(4, auto);
     align-items: center;
     column-gap: 3rem;
+    row-gap: 3rem;
     width: 85%;
     margin: auto;
 }
@@ -200,7 +205,7 @@ div.mdl-grid.dt-table {
 
 .g-diap12-cont h3 {
     text-align: start;
-    font-size: 20px;
+    font-size: max(1.2vw,1.2rem);
 }
 
 .g-diap12-cont p, .g-diap12-cont h3 {
@@ -222,10 +227,13 @@ div.mdl-grid.dt-table {
     grid-column: 1/3;
 }
 
-.g-diap12-title>h1 {}
+.g-diap12-title>h1 {
+    font-size: max(2vw,1.7rem);
+}
 
 .g-diap12-title>h3 {
     text-align: start;
+    font-size: max(1.5vw,1.4rem);
     font-weight: 100;
 }
 
@@ -259,7 +267,7 @@ div.mdl-grid.dt-table {
 }
 
 .font-vw-2 {
-    font-size: 1.2vw;
+    font-size: max(1.2vw,1.1rem);
 }
 
 .img-inmersion {
@@ -384,7 +392,7 @@ div.mdl-grid.dt-table {
     color: rgb(2, 94, 187);
     font-style: italic;
     text-transform: uppercase;
-    font-size: 2.2rem;
+    font-size: max(2.2vw,1.5rem);
     font-weight: 100;
     margin-bottom: 25px;
 }
@@ -431,7 +439,7 @@ h3.title {
     color: rgb(2, 94, 187);
     font-style: italic;
     max-width: 800px;
-    font-size: 2.5rem;
+    font-size: max(2.4vw,1.8rem);
     margin-bottom: 5rem;
     margin-left: 1rem;
     text-align: center;
@@ -514,7 +522,7 @@ section {
 }
 
 .font-vw {
-    font-size: 1vw !important;
+    font-size: max(1vw,1rem) !important;
 }
 
 .single-profile-top>p {
